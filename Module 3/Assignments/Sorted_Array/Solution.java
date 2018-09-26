@@ -22,8 +22,8 @@ public final class Solution {
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        int size = sc.nextInt();
-        int size1 = sc.nextInt();
+        int size = Integer.parseInt(sc.nextLine());
+        int size1 = Integer.parseInt(sc.nextLine());
         int[] arr1 = new int[size];
         int[] arr2 = new int[size1];
         int[] result = new int[size + size1];
