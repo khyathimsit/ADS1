@@ -10,17 +10,17 @@ class Solution {
 			array[i] = sc.nextInt();
 		}
 		Arrays.sort(array);
-		for (int i = 0; i < size - 1; i++) {
-			for (int j = i + 1; j < size - 1; j++) {
+		for (int i = 0; i < size; i++) {
+			for (int j = i + 1; j < size; j++) {
 				int low = j + 1;
-				int high = size;
+				int high = size - 1;
 				while (low <= high) {
 					int mid = (low + high) / 2;
 					if (-(array[i] + array[j]) == array[mid]) {
                 		count = count + 1;
                 	}
                 	else if (-(array[i] + array[j]) < array[mid]) {
-                		low = mid - 1;
+                		high = mid - 1;
             		}
             		else {
                 		low = mid + 1;
