@@ -2,14 +2,11 @@
  * { item_description }
  */
 import java.util.Scanner;
-/**.
- * { item_description }
- */
-import java.util.Arrays;
+
 /**.
  * Class for solution.
  */
-class Solution {
+public final class Solution {
     /**.
      * Constructs the object.
      */
@@ -18,7 +15,12 @@ class Solution {
          * { item_description }
          */
     }
-    public static void main(String[] args) {
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int size = sc.nextInt();
         int size1 = sc.nextInt();
@@ -31,21 +33,21 @@ class Solution {
             String[] tokens = line.split(",");
             for (int n = 0; n < size; n++) {
                 arr1[n] = Integer.parseInt(tokens[n]);
-            } 
+            }
         }
-        
+
         if (size1 > 0) {
             String line1 = sc.next();
             String[] tokens1 = line1.split(",");
             for (int n = 0; n < size1; n++) {
                 arr2[n] = Integer.parseInt(tokens1[n]);
-            }  
+            }
         }
-        
+
         int i = 0;
         int j = 0;
         int k = 0;
-        
+
         while (i < size && j < size1) {
             if (arr1[i] < arr2[j]) {
                 result[k] = arr1[i];
@@ -76,3 +78,4 @@ class Solution {
         System.out.println(result[result.length - 1]);
     }
 }
+
