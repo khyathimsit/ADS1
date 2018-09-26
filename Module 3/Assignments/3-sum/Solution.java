@@ -1,24 +1,24 @@
-/**
+/**.
  * { item_description }
  */
 import java.util.Scanner;
-/**
+/**.
  * { item_description }
  */
 import java.util.Arrays;
-/**
+/**.
  * Class for solution.
  */
 public final class Solution {
-    /**
+    /**.
      * Constructs the object.
      */
     private Solution() {
-        /**
+        /**.
          * { item_description }
          */
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
@@ -43,8 +43,7 @@ public final class Solution {
                     }
                     if (-(array[i] + array[j]) < array[mid]) {
                         high = mid - 1;
-                    }
-                    else {
+                    } else {
                         low = mid + 1;
                     }
                 }
@@ -53,3 +52,4 @@ public final class Solution {
         System.out.println(count);
     }
 }
+
