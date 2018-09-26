@@ -10,8 +10,8 @@ class Solution {
 			array[i] = sc.nextInt();
 		}
 		Arrays.sort(array);
-		for (int i = 0; i < size; i++) {
-			for (int j = i + 1; j < size; j++) {
+		for (int i = 0; i < size - 1; i++) {
+			for (int j = i + 1; j < size - 1; j++) {
 				int low = j + 1;
 				int high = size;
 				while (low <= high) {
