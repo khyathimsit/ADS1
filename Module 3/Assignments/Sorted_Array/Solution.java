@@ -34,7 +34,7 @@ class Solution {
             } 
         }
         
-        if (size > 0) {
+        if (size1 > 0) {
             String line1 = sc.next();
             String[] tokens1 = line1.split(",");
             for (int n = 0; n < size1; n++) {
