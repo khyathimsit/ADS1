@@ -19,7 +19,7 @@ class Solution {
 					if (-(array[i] + array[j]) == array[mid]) {
                 		count = count + 1;
                 	}
-                	else if (-(array[i] + array[j]) < array[mid]) {
+                	if (-(array[i] + array[j]) < array[mid]) {
                 		high = mid - 1;
             		}
             		else {
