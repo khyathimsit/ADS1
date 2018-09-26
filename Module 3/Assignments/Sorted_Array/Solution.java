@@ -58,8 +58,8 @@ public final class Solution {
                     k++;
                     j++;
                 }
-            }   
-        
+            }
+
             while (i < size && j < size1) {
                 if (arr1[i] < arr2[j]) {
                     result[k] = arr1[i];
