@@ -25,17 +25,21 @@ class Solution {
         int[] arr1 = new int[size];
         int[] arr2 = new int[size1];
         int[] result = new int[size + size1];
-        
-        String line = sc.next();
-        String[] tokens = line.split(",");
-        for (int n = 0; n < size; n++) {
-            arr1[n] = Integer.parseInt(tokens[n]);
+
+        if (size > 0) {
+           String line = sc.next();
+            String[] tokens = line.split(",");
+            for (int n = 0; n < size; n++) {
+                arr1[n] = Integer.parseInt(tokens[n]);
+            } 
         }
         
-        String line1 = sc.next();
-        String[] tokens1 = line1.split(",");
-        for (int n = 0; n < size1; n++) {
-            arr2[n] = Integer.parseInt(tokens1[n]);
+        if (size > 0) {
+            String line1 = sc.next();
+            String[] tokens1 = line1.split(",");
+            for (int n = 0; n < size1; n++) {
+                arr2[n] = Integer.parseInt(tokens1[n]);
+            }  
         }
         
         int i = 0;
