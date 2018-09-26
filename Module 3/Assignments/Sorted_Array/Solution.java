@@ -29,7 +29,7 @@ public final class Solution {
         int[] result = new int[size + size1];
 
         //if (size > 0) {
-           String line = sc.next();
+           String line = sc.nextLine();
             String[] tokens = line.split(",");
             for (int n = 0; n < size; n++) {
                 arr1[n] = Integer.parseInt(tokens[n]);
@@ -37,7 +37,7 @@ public final class Solution {
         //}
 
         //if (size1 > 0) {
-            String line1 = sc.next();
+            String line1 = sc.nextLine();
             String[] tokens1 = line1.split(",");
             for (int n = 0; n < size1; n++) {
                 arr2[n] = Integer.parseInt(tokens1[n]);
@@ -84,7 +84,7 @@ public final class Solution {
                 j++;
             }
         }
-        
+
         for (int n = 0; n < result.length - 1; n++) {
             System.out.print(result[n] + ",");
         }
