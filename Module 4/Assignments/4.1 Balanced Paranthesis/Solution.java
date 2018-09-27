@@ -89,7 +89,7 @@ public final class Solution {
          * { item_description }
          */
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      args  The arguments
@@ -108,7 +108,13 @@ public final class Solution {
             val++;
         }
     }
-    
+    /**.
+     * Determines if balanced.
+     *
+     * @param      s     { parameter_description }
+     *
+     * @return     True if balanced, False otherwise.
+     */
     public static boolean isBalanced(final String s) {
         StackLL sll = new StackLL();
         int length = s.length();
