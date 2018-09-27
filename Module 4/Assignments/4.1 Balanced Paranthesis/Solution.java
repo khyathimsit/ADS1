@@ -120,11 +120,11 @@ public final class Solution {
                 if (sll.isEmpty()) {
                     return false;
                 }
-                if (character == '(' && sll.peek() == ')') {
+                if (character == ')' && sll.peek() == '(') {
                     sll.pop();
-                } else if (character == '[' && sll.peek() == ']') {
+                } else if (character == ']' && sll.peek() == '[') {
                     sll.pop();
-                } else if (character == '{' && sll.peek() == '}') {
+                } else if (character == '}' && sll.peek() == '{') {
                     sll.pop();
                 } else {
                     return false;
