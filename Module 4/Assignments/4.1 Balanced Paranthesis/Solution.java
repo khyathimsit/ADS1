@@ -105,6 +105,7 @@ public final class Solution {
             } else {
                 System.out.println("NO");
             }
+            val++;
         }
     }
     
