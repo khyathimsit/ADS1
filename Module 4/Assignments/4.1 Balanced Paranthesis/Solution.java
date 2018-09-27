@@ -17,11 +17,11 @@ class StackLL {
         /**.
          * { var_description }
          */
-        char value;
+        private char value;
         /**.
          * { var_description }
          */
-        Node next;
+        private Node next;
         /**.
          * Constructor
          */
