@@ -55,19 +55,20 @@ class LinkedList {
     }
 
     public void removeBack(){
-    	Node temp = null;
-        Node pop = tail;
-        Node head1 = head;
-    	while (head1 != tail){
-    		temp = head1;
-            head1 = head1.next;
-    	}
-    	//int item = temp.next.value;
-    	
-    	tail = temp;
-        tail.next = null;
-        size--;
-    	//return item;
+    	if (tail != null) {
+            Node temp = null;
+            Node pop = tail;
+            Node head1 = head;
+            while (head1 != tail){
+                temp = head1;
+                head1 = head1.next;
+            } 
+            //int item = temp.next.value;
+            tail = temp;
+            tail.next = null;
+            size--;
+            //return item; 
+        }
     }
     public boolean isEmpty() {
         return head == null;

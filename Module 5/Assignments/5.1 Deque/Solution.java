@@ -23,7 +23,7 @@ class Solution {
 				break;
 
 				case"popLeft":
-				if (d.isEmpty()) {
+				if (!d.isEmpty()) {
 					d.deleteFirst();
 					System.out.println(d.display());
 				} else {
@@ -32,7 +32,7 @@ class Solution {
 				break;
 
 				case"popRight":
-				    if (d.isEmpty()) {
+				    if (!d.isEmpty()) {
 				    	d.deleteLast();
 						System.out.println(d.display());
 				    } else {
