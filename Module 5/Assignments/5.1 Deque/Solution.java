@@ -9,7 +9,7 @@ class Solution {
 		int n = sc.nextInt();
 		sc.nextLine();
 		for (int i = 0; i < n; i++) {
-			String line = sc.next();
+			String line = sc.nextLine();
 			String[] tokens = line.split(" ");
 			switch (tokens[0]) {
 				case"pushLeft":
