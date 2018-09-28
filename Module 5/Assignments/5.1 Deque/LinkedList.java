@@ -82,7 +82,7 @@ class LinkedList {
                 str += temp.value + ", ";
                 temp = temp.next;
             }
-            return str + str.substring(0, str.length() - 2) + "]";
+            return str.substring(0, str.length() - 2) + "]";
         }
         return "[]";
     }
