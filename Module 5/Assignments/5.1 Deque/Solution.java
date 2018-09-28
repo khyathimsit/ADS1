@@ -55,11 +55,9 @@ public final class Solution {
                     System.out.println("Deck is empty");
                 }
                 break;
-                
                 case"size" :
                     System.out.println(d.size());
                 break;
-                
                 default:
                 break; 
             }
