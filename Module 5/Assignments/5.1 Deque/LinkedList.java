@@ -65,11 +65,13 @@ class LinkedList {
     	//int item = temp.next.value;
     	
     	tail = temp;
-        //tail.next = null;
+        tail.next = null;
         size--;
     	//return item;
     }
-
+    public boolean isEmpty() {
+        return head == null;
+    }
     public int size() {
         return size;
     }

@@ -23,13 +23,21 @@ class Solution {
 				break;
 
 				case"popLeft":
+				if (d.isEmpty()) {
 					d.deleteFirst();
 					System.out.println(d.display());
+				} else {
+					System.out.println("Deck is empty");
+				}
 				break;
 
 				case"popRight":
-					d.deleteLast();
-					System.out.println(d.display());
+				    if (d.isEmpty()) {
+				    	d.deleteLast();
+						System.out.println(d.display());
+				    } else {
+					System.out.println("Deck is empty");
+				}
 				break;
 				
 				case"size" :

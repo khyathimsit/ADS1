@@ -27,4 +27,8 @@ class Deque {
 	public String display() {
 		return deque.toString();
 	}
+
+	public boolean isEmpty() {
+		return deque.isEmpty();
+	}
 }
