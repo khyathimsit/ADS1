@@ -26,7 +26,7 @@ public final class Solution {
 				str += q.dequeue() + " ";
 			}
 			System.out.println(str.substring(0, str.length() - 1));
-			System.out.println();
+			//System.out.println();
 		}
 	}
 }
