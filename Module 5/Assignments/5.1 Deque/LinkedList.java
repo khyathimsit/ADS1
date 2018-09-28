@@ -78,8 +78,9 @@ class LinkedList {
         if (size != 0) {
             String str = "[";
             Node temp = head;
-            while (temp.next != null) {
+            while (temp != null) {
                 str += temp.value + ", ";
+                // System.out.println(str);
                 temp = temp.next;
             }
             return str.substring(0, str.length() - 2) + "]";
