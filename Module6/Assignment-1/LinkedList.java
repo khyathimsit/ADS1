@@ -2,6 +2,7 @@ class LinkedList {
 	public Node head;
 	public Node tail;
     public int size;
+    public String item;
 	
     private class Node {
         private String value;
@@ -12,7 +13,22 @@ class LinkedList {
         head = null;
         tail = null;
     }
-	
+	public void insertFront(final String value){
+        if (head == null) {
+            Node oldHead = head;
+            head = new Node();
+            head.value = value;
+            head.next = null;
+            tail = head;
+        } else {
+            Node oldHead = head;
+            head = new Node();
+            head.value = value;
+            head.next = oldHead;
+        }
+        size++;
+    }
+    
 	public void push(final String value){
     	if (tail == null) {
            Node oldTail = tail;
@@ -30,7 +46,23 @@ class LinkedList {
         }
         size++;
     }
-
+    public String removeBack(){
+        if (tail != null) {
+            Node temp = null;
+            Node pop = tail;
+            Node head1 = head;
+            while (head1 != tail){
+                temp = head1;
+                head1 = head1.next;
+            } 
+            item = temp.next.value;
+            tail = temp;
+            tail.next = null;
+            size--;
+             
+        }
+        return item;
+    }
     public String pop(){
    		if (head != null) {
             String value = head.value;
