@@ -119,9 +119,8 @@ class AddLargeNumbers {
     		temp = temp.next;
     	}
     	LinkedList result = new LinkedList();
-
+    	int carry = 0;
     	while(!(s1.isEmpty() && s2.isEmpty())){
-    		int carry = 0;
     		int sum = s1.pop() + s2.pop() + carry;
     		if(sum >= 10){
     			carry = 1;
@@ -130,6 +129,9 @@ class AddLargeNumbers {
     			carry = 0;
     		}
     		result.pushfront(sum);
+    	}
+    	if(carry == 1){
+    		result.pushfront(carry);
     	}
     	return result;
     }
