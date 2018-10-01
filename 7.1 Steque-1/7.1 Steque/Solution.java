@@ -98,7 +98,7 @@ class Solution{
 					System.out.println();
 					break;
 				}
-				obj.print();
+				System.out.println(obj.print());
 			}
 		}
 	}
