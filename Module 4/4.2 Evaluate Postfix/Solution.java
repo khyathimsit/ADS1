@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 class LinkedStack {
     /**.
      * variable head of node type.
@@ -11,7 +12,7 @@ class LinkedStack {
         /**.
          * { var_description }
          */
-        private char value;
+        private int value;
         /**.
          * { var_description }
          */
@@ -36,8 +37,8 @@ class LinkedStack {
      *
      * @return     { description_of_the_return_value }
      */
-    public char pop() {
-        char value = head.value;
+    public int pop() {
+        int value = head.value;
         head = head.next;
         return value;
     }
@@ -46,7 +47,7 @@ class LinkedStack {
      *
      * @param      value  The value
      */
-    public void push(final char value) {
+    public void push(final int value) {
         Node oldHead = head;
         head = new Node();
         head.value = value;
@@ -70,4 +71,27 @@ public final class Solution {
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+        int element1;
+        int element2;
+        String[] tokens = sc.nextLine().split(" ");
+        LinkedStack s = new LinkedStack();
+        for (int i = 0; i < tokens.length; i++) {
+            if (!(Arrays.asList("+", "-", "*", "/").contains(tokens[i]))) {
+                s.push(Integer.parseInt(tokens[i]));
+            } else {
+                element1 = s.pop();
+                element2 = s.pop();
+                if (tokens[i].equals("+")) {
+                    s.push(element1 + element2);
+                } else if (tokens[i].equals("-")) {
+                    s.push(element1 - element2);
+                } else if (tokens[i].equals("*")) {
+                    s.push(element1 * element2);
+                } else {
+                    s.push(element1 / element2);
+                }
+            }
+        }
+        System.out.println(s.pop());
+    }
+}
