@@ -1,5 +1,14 @@
+/**.
+ * { item_description }
+ */
 import java.util.Scanner;
+/**.
+ * { item_description }
+ */
 import java.util.Arrays;
+/**.
+ * List of linkeds.
+ */
 class LinkedStack {
     /**.
      * variable head of node type.
@@ -54,7 +63,9 @@ class LinkedStack {
         head.next = oldHead;
     }
 }
-
+/**.
+ * { item_description }
+ */
 public final class Solution {
     /**.
      * Constructs the object.
