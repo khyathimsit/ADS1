@@ -19,6 +19,7 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
+    // Complexity for this method is N^2.
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = Integer.parseInt(sc.nextLine());
