@@ -28,6 +28,9 @@ class LinkedList{
 		}
 		int temp = first.ele;
 		first = first.next;
+		if(first == null){
+			last = null;
+		}
 		return temp;
 	}
 
