@@ -21,8 +21,8 @@ class SelectionSort {
                 if (team[j].compareTo(team[min]) > -1) {
                     min = j;
                 }
-                swap(team, i, min);
             }
+            swap(team, i, min);
         }
     }
 
