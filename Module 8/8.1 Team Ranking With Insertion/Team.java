@@ -26,7 +26,7 @@ class Team {
 	public int getDraw() {
 		return this.draw;
 	}
-
+// time complexity of this method is O(1) as it checks one time.
 	public int compareTo(Team that) {
 		if (this.getWins() > that.getWins()) {
 			return 1;

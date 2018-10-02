@@ -13,7 +13,8 @@ class SelectionSort {
     public int size() {
         return size;
     }
-
+// time complexity for this method is O(N^2).
+// In first for loop and second loop it iterates through the size of array
     public void selection() {
         for (int i = 0;i < size; i++) {
             int min = i;
@@ -25,13 +26,14 @@ class SelectionSort {
             swap(team, i, min);
         }
     }
-
+// time complexity of this method is O(1). It swaps the elements only once.   
     public void swap(Team[] team, int i, int min) {
         Team temp = team[min];
         team[min] = team[i];
         team[i] = temp;
     }
-
+// time complexity of this method is O(N). It iterates through
+// the array to print all the objects in array.
     public String toString() {
         String str = "";
         for (int i = 0; i < size - 1; i++) {
