@@ -19,6 +19,7 @@ public final class Solution {
      *
      * @param      args  The arguments
      */
+    // time complexity for this method:O(N)
     public static void main(final String[] args) {
         LinkedListRecursion list = new LinkedListRecursion();
         Scanner sc = new Scanner(System.in);

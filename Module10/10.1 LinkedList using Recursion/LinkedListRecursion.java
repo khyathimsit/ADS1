@@ -1,19 +1,49 @@
+/**.
+ * Class for linked list recursion.
+ */
 class LinkedListRecursion {
+    /**.
+     * { var_description }
+     */
 	private Node head;
-	private Node tail;
+	/**.
+     * { var_description }
+     */
+    private Node tail;
+    /**.
+     * { var_description }
+     */
     public int size;
+    /**.
+     * { var_description }
+     */
     private static int index;
-	
+	/**.
+     * Class for node.
+     */
     private class Node {
+        /**.
+         * { var_description }
+         */
         private int value;
+        /**.
+         * { var_description }
+         */
         private Node next;
     }
-
+    /**.
+     * Constructs the object.
+     */
     LinkedListRecursion() {
         head = null;
         tail = null;
     }
-
+    /**.
+     * { function_description }
+     *
+     * @param      value  The value
+     */
+    // time complexity for this method:O(1)
     public void insertFront(final int value){
     	if (head == null) {
             Node oldHead = head;
@@ -29,6 +59,7 @@ class LinkedListRecursion {
         }
         size++;
     }
+    // time complexity for this method:O(1)
     public void insertBack(final int value){
     	if (tail == null) {
             Node oldTail = tail;
@@ -46,6 +77,7 @@ class LinkedListRecursion {
         }
         size++;
     }
+    // time complexity for this method:O(1)
     public void removeFront(){
     	if (head != null) {
             //int value = head.value;
@@ -54,7 +86,7 @@ class LinkedListRecursion {
             //return value;
         }
     }
-
+    // time complexity for this method:O(1)
     public void removeBack(){
     	if (tail != null) {
             Node temp = null;
@@ -71,10 +103,11 @@ class LinkedListRecursion {
             //return item; 
         }
     }
+    // time complexity for this method:O(1)
     public void insertAt(int position, int value) {
         insertAt(head, position, value);
     }
-
+    // time complexity for this method:O(N)
     public void insertAt(Node head, int position, int value) {
         if (position == 0) {
             insertFront(value);
@@ -92,9 +125,11 @@ class LinkedListRecursion {
         index++;
         insertAt(head.next, position, value);
     }
+    // time complexity for this method:O(1)
     public void reverse() {
     	head = reverseRecursive(head);
     }
+    // time complexity for this method:O(N)
     public Node reverseRecursive(Node head) {
     	if (head == null || head.next == null) {
     		return head;
@@ -104,13 +139,15 @@ class LinkedListRecursion {
         head.next = null; 
         return temp;
     }
+    // time complexity for this method:O(1)
     public boolean isEmpty() {
         return head == null;
     }
+    // time complexity for this method:O(1)
     public int size() {
         return size;
     }
-
+    // time complexity for this method:O(N)
     public String toString() {
         if (size != 0) {
             String str = "";
