@@ -42,7 +42,7 @@ public final class Sorting {
         }
         swap(array, low, j);
         System.out.println(toString(array));
-        return j; 
+        return j;
     }
     /**.
      * Time complexity is O(1)
