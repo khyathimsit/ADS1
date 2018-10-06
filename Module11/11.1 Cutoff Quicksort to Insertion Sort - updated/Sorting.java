@@ -1,8 +1,4 @@
 /**.
- * { item_description }
- */
-import java.util.Comparator;
-/**.
  * Class for sorting.
  */
 public final class Sorting {
@@ -60,7 +56,7 @@ public final class Sorting {
      * @param      cutoff  The cutoff
      */
     private void sort(final Comparable[] array, final int low,
-      final int high, final int cutoff){
+      final int high, final int cutoff) {
       if (high <= low + cutoff - 1) {
         insertionSort(array, low, high);
         System.out.println("insertionSort called");
@@ -81,7 +77,7 @@ public final class Sorting {
    * @param      cutoff  The cutoff
    */
     public void sort(final Comparable[] array, final int cutoff) {
-        sort(array, 0, array.length-1, cutoff);
+        sort(array, 0, array.length - 1, cutoff);
     }
     /**.
      * Time complexity is O(N^2)
@@ -96,8 +92,8 @@ public final class Sorting {
     public void insertionSort(final Comparable[] array,
       final int low, final int high) {
         for (int i = low; i <= high; i++) {
-            for (int j = i; j > low && less(array[j], array[j-1]); j--) {
-                swap(array, j, j-1);
+            for (int j = i; j > low && less(array[j], array[j - 1]); j--) {
+                swap(array, j, j - 1);
             }
         }
     }
