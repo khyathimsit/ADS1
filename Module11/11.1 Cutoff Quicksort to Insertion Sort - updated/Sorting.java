@@ -3,6 +3,7 @@ class Sorting {
     Sorting() {
 
     }
+    //time complexity for this method is O(N)
     public int partition(Comparable[] array, int low, int high) {
         int i = low;
         int j = high + 1;
