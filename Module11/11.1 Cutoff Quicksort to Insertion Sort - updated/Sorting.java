@@ -1,10 +1,21 @@
+/**
+ * { item_description }
+ */
 import java.util.*;
-class Sorting {
+/**
+ * Class for sorting.
+ */
+public final class Sorting {
+    /**
+     * Constructs the object.
+     */
     Sorting() {
-
+      /**
+       * { item_description }
+       */
     }
     //time complexity for this method is O(N)
-    public int partition(Comparable[] array, int low, int high) {
+    public int partition(final Comparable[] array, final int low, final int high) {
         int i = low;
         int j = high + 1;
         while (true) {
@@ -31,7 +42,7 @@ class Sorting {
     /**
      * Time complexity is O(1)
      */
-    private void sort(Comparable[] array, int low, int high, int cutoff){
+    private void sort(final Comparable[] array, final int low, final int high, final int cutoff){
       if (high <= low + cutoff - 1) {
         insertionSort(array, low, high);
         System.out.println("insertionSort called");
@@ -45,13 +56,13 @@ class Sorting {
     /**
      * Time complexity is O(1)
      */
-    public void sort(Comparable[] array, int cutoff) {
+    public void sort(final Comparable[] array, final int cutoff) {
         sort(array, 0, array.length-1, cutoff);
     }
     /**
      * Time complexity is O(N^2)
      */
-    public void insertionSort(Comparable[] array, int low, int high) {
+    public void insertionSort(final Comparable[] array, final int low, final int high) {
         for (int i = low; i <= high; i++) {
             for (int j = i; j > low && less(array[j], array[j-1]); j--) {
                 swap(array, j, j-1);
@@ -61,7 +72,7 @@ class Sorting {
     /**
      * Time complexity is O(1)
      */
-    public void swap(Comparable[] array, int i, int j) {
+    public void swap(final Comparable[] array, final int i, final int j) {
         Comparable swap = array[i];
         array[i] = array[j];
         array[j] = swap;
@@ -69,13 +80,13 @@ class Sorting {
     /**
      * Time complexity is O(1)
      */
-    public boolean less(Comparable a, Comparable b) {
+    public boolean less(final Comparable a, final Comparable b) {
         return a.compareTo(b) < 0;
     }
     /**
      * Time complexity is O(N)
      */
-    public Object toString(Object[] a) {
+    public Object toString(final Object[] a) {
         String s = "[";
         int i;
         for (i = 0; i < a.length - 1; i++) {
