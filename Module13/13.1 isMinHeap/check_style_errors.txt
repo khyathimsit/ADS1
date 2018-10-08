@@ -1,17 +1,4 @@
 Starting audit...
 [ERROR] C:\Users\user\Desktop\ADS1\Module13\13.1 isMinHeap\Solution.java:9:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] C:\Users\user\Desktop\ADS1\Module13\13.1 isMinHeap\Solution.java:10:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] C:\Users\user\Desktop\ADS1\Module13\13.1 isMinHeap\Solution.java:29: Line is longer than 80 characters (found 94). [LineLength]
-[ERROR] C:\Users\user\Desktop\ADS1\Module13\13.1 isMinHeap\Solution.java:31: Line is longer than 80 characters (found 82). [LineLength]
-[ERROR] C:\Users\user\Desktop\ADS1\Module13\13.1 isMinHeap\Solution.java:32: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] C:\Users\user\Desktop\ADS1\Module13\13.1 isMinHeap\Solution.java:51: Line is longer than 80 characters (found 95). [LineLength]
-[ERROR] C:\Users\user\Desktop\ADS1\Module13\13.1 isMinHeap\Solution.java:53: Line is longer than 80 characters (found 100). [LineLength]
-[ERROR] C:\Users\user\Desktop\ADS1\Module13\13.1 isMinHeap\Solution.java:54: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] C:\Users\user\Desktop\ADS1\Module13\13.1 isMinHeap\Solution.java:73: Line is longer than 80 characters (found 94). [LineLength]
-[ERROR] C:\Users\user\Desktop\ADS1\Module13\13.1 isMinHeap\Solution.java:75: Line is longer than 80 characters (found 102). [LineLength]
-[ERROR] C:\Users\user\Desktop\ADS1\Module13\13.1 isMinHeap\Solution.java:76: Line is longer than 80 characters (found 84). [LineLength]
-[ERROR] C:\Users\user\Desktop\ADS1\Module13\13.1 isMinHeap\Solution.java:96: Line is longer than 80 characters (found 93). [LineLength]
-[ERROR] C:\Users\user\Desktop\ADS1\Module13\13.1 isMinHeap\Solution.java:98: Line is longer than 80 characters (found 100). [LineLength]
-[ERROR] C:\Users\user\Desktop\ADS1\Module13\13.1 isMinHeap\Solution.java:99: Line is longer than 80 characters (found 84). [LineLength]
 Audit done.
-Checkstyle ends with 14 errors.
+Checkstyle ends with 1 errors.
