@@ -14,7 +14,7 @@ final class Solution {
         /**
          * { Empty constructor }.
          */
-    } 
+    }
     /**
      * { Main method }.
      *

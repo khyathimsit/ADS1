@@ -17,7 +17,7 @@ class MinHeap<E extends Comparable<E>> {
      *
      * @param      len   The length
      */
-    protected MinHeap(final int len) {
+    protected MinHeap (final int len) {
         array = (E[])new Comparable[len + 1];
         size = 0;
     }
@@ -30,7 +30,7 @@ class MinHeap<E extends Comparable<E>> {
      * 
      * 
      */
-    public boolean insert(final E value) {
+    public boolean insert (final E value) {
         array[++size] = value;
         return (swim(size));
     }
@@ -41,7 +41,7 @@ class MinHeap<E extends Comparable<E>> {
      *
      * @return     { Boolean }.
      */
-    public boolean swim(final int k1) {
+    public boolean swim (final int k1) {
         int k = k1;
         while (k > 1 && less(k / 2, k)) {
             k = k / 2;
@@ -59,7 +59,7 @@ class MinHeap<E extends Comparable<E>> {
      *
      * @return     { boolean }.
      */
-    public boolean less(final int one, final int two) {
+    public boolean less (final int one, final int two) {
         return ((array[one].compareTo(array[two])) <= 0);
     }
 }
