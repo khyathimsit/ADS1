@@ -28,8 +28,7 @@ class MinHeap<E extends Comparable<E>> {
      *
      * @return     { Generic type }.
      *
-     *Time Complexity:
-     *Worst Case : O(logN)
+     *Time Complexity:O(logN)
      */
     public boolean insert(final E value) {
         array[++size] = value;
@@ -41,8 +40,7 @@ class MinHeap<E extends Comparable<E>> {
      * @param      k1     { Integer }.
      *
      * @return     { Boolean }.
-     * Time Complexity:
-     *Worst Case : O(logN)
+     * Time Complexity:O(logN)
      */
     public boolean swim(final int k1) {
         int k = k1;
