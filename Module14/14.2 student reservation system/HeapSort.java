@@ -74,7 +74,7 @@ class HeapSort {
         }
     }
     /**
-     * Less FUnction.
+     * Less Function.
      *
      * @param      students1  The students
      * @param      i         { parameter_description }
@@ -208,4 +208,3 @@ class HeapSort {
         }
     }
 }
-
