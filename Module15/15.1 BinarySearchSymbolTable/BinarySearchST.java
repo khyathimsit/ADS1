@@ -4,7 +4,7 @@
  * @param      <Key>    The key
  * @param      <Value>  The value
  */
-public class BinarySearchST<Key extends Comparable <Key>, Value> {
+public class BinarySearchST<Key extends Comparable<Key>, Value> {
     /**.
      * { var_description }
      */
@@ -40,7 +40,6 @@ public class BinarySearchST<Key extends Comparable <Key>, Value> {
             delete(k);
             return;
         }
-
         int i = rank(k);
         if (i < size && keys[i].compareTo(k) == 0) {
             vals[i] = v;
@@ -50,7 +49,6 @@ public class BinarySearchST<Key extends Comparable <Key>, Value> {
             keys[j] = keys[j - 1];
             vals[j] = vals[j - 1];
         }
-
         keys[i] = k;
         vals[i] = v;
         size++;
@@ -62,6 +60,7 @@ public class BinarySearchST<Key extends Comparable <Key>, Value> {
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
+     * Time complexity : O(logn)
      */
     public int rank(final Key key) {
         if (key == null) {
@@ -89,6 +88,7 @@ public class BinarySearchST<Key extends Comparable <Key>, Value> {
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
+     * Time complexity : O(1)
      */
     public boolean contains(final Key key) {
         if (key == null) {
@@ -103,6 +103,7 @@ public class BinarySearchST<Key extends Comparable <Key>, Value> {
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
+     * Time complexity : O(1)
      */
     public Value get(final Key key) {
         if (key == null) {
@@ -122,6 +123,7 @@ public class BinarySearchST<Key extends Comparable <Key>, Value> {
      * Determines if empty.
      *
      * @return     True if empty, False otherwise.
+     * Time complexity : O(1)
      */
     public boolean isEmpty() {
         return size == 0;
@@ -131,6 +133,7 @@ public class BinarySearchST<Key extends Comparable <Key>, Value> {
      * { function_description }
      *
      * @return     { description_of_the_return_value }
+     * Time complexity : O(1)
      */
     public Key max() {
         if (isEmpty()) {
@@ -145,6 +148,7 @@ public class BinarySearchST<Key extends Comparable <Key>, Value> {
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
+     * Time complexity : O(logn)
      */
     public Key floor(final Key key) {
     //  if (key == null) {
@@ -163,6 +167,7 @@ public class BinarySearchST<Key extends Comparable <Key>, Value> {
 
     /**.
      * { function_description }
+     * Time complexity : O(logn)
      */
     public void deleteMin() {
         if (isEmpty()) {
@@ -175,7 +180,9 @@ public class BinarySearchST<Key extends Comparable <Key>, Value> {
      * { function_description }
      *
      * @return     { description_of_the_return_value }
+     * Time complexity : O(1)
      */
+
     public Key min() {
         if (isEmpty()) {
             System.out.println("empty symbol table");
@@ -187,6 +194,7 @@ public class BinarySearchST<Key extends Comparable <Key>, Value> {
      * { function_description }
      *
      * @param      key   The key
+     * Time complexity : O(logn)
      */
     public void delete(final Key key) {
         if (key == null) {
@@ -210,6 +218,7 @@ public class BinarySearchST<Key extends Comparable <Key>, Value> {
      * { function_description }
      *
      * @return     { description_of_the_return_value }
+     * Time complexity : O(n)
      */
     public String keys() {
         String str = "";
