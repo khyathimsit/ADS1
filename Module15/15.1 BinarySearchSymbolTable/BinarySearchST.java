@@ -95,7 +95,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
         if (i == 0) {
             return null;
         } else {
-            return keys[size - 1];
+            return keys[i - 1];
         }
     } 
 
