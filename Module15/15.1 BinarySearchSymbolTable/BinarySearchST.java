@@ -103,7 +103,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
-     * Time complexity : O(1)
+     * Time complexity : O(logn)
      */
     public Value get(final Key key) {
         if (key == null) {
