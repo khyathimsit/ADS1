@@ -1,14 +1,38 @@
+/**.
+ * Class for binary search st.
+ *
+ * @param      <Key>    The key
+ * @param      <Value>  The value
+ */
 public class BinarySearchST<Key extends Comparable<Key>, Value> {
+    /**.
+     * { var_description }
+     */
     private Key[] keys;
+    /**.
+     * { var_description }
+     */
     private Value[]vals;
+    /**.
+     * { var_description }
+     */
     private int size = 0;
-
+    
+    /**.
+     * Constructs the object.
+     */
     public BinarySearchST() {
         keys = (Key[]) new Comparable[20];
         vals = (Value[]) new Object[20];
     }
 
-    public void put(Key k, Value v) {
+    /**.
+     * { function_description }
+     *
+     * @param      k     { parameter_description }
+     * @param      v     { parameter_description }
+     */
+    public void put(final Key k, final Value v) {
         if (k == null) {
             System.out.println("key is null");
         }
@@ -32,7 +56,14 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
         size++;
     }
 
-    public int rank(Key key) {
+    /**.
+     * { function_description }
+     *
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int rank(final Key key) {
         if (key == null) {
             System.out.println("key is null");
         }
@@ -52,14 +83,28 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
         return low;
     }
 
-    public boolean contains(Key key) {
+    /**.
+     * { function_description }
+     *
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public boolean contains(final Key key) {
         if (key == null) {
             System.out.println("key is null");
         }
         return get(key) != null;
     }
 
-    public Value get(Key key) {
+    /**.
+     * { function_description }
+     *
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Value get(final Key key) {
         if (key == null) {
             System.out.println("key is null");
         }
@@ -73,10 +118,20 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
         return null;
     }
 
+    /**.
+     * Determines if empty.
+     *
+     * @return     True if empty, False otherwise.
+     */
     public boolean isEmpty() {
         return size == 0;
     }
 
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Key max() {
         if (isEmpty()) {
             System.out.println("No elements are available in the Symbol table");
@@ -84,7 +139,14 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
         return keys[size - 1];
     }
 
-    public Key floor(Key key) {
+    /**.
+     * { function_description }
+     *
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public Key floor(final Key key) {
     //  if (key == null) {
     //      System.out.println("key is null");
     //  }
@@ -99,6 +161,9 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
         }
     } 
 
+    /**.
+     * { function_description }
+     */
     public void deleteMin() {
         if (isEmpty()) {
             System.out.println("No elements are available in the Symbol table to perform deletion");
@@ -106,6 +171,11 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
         delete(min());
     }
 
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Key min() {
         if (isEmpty()) {
             System.out.println("empty symbol table");
@@ -113,7 +183,12 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
         return keys[0]; 
     }
 
-    public void delete(Key key) {
+    /**.
+     * { function_description }
+     *
+     * @param      key   The key
+     */
+    public void delete(final Key key) {
         if (key == null) {
             System.out.println("key is null");
         }
@@ -131,6 +206,11 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
         vals[size] = null;
     }
 
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public String keys() {
         String str = "";
         int i = 0;
