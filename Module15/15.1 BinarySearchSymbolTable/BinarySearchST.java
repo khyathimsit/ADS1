@@ -31,6 +31,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
      *
      * @param      k     { parameter_description }
      * @param      v     { parameter_description }
+     * Time complexity : O(logn)
      */
     public void put(final Key k, final Value v) {
         if (k == null) {
