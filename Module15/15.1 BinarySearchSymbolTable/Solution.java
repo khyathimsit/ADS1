@@ -17,31 +17,34 @@ public final class Solution {
 			switch (tokens1[0]) {
 				case "get":
 					System.out.println(bs.get(tokens1[1]));
-				return;
+				break;
 
 				case "max":
 					System.out.println(bs.max());
-				return;
+				break;
 
 				case "floor":
 					System.out.println(bs.floor(tokens1[1]));
-				return;
+				break;
 
 				case "rank":
 					System.out.println(bs.rank(tokens1[1]));
-				return;
+				break;
 
 				case "contains":
 					System.out.println(bs.contains(tokens1[1]));
-				return;
+				break;
 
 				case "deleteMin":
 					bs.deleteMin();
-				return;
+				break;
 
 				case "keys":
 					System.out.println(bs.keys());
-				return;
+				break;
+
+				default:
+				break;
 			}
 		}
 	}

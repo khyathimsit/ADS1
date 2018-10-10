@@ -5,8 +5,7 @@ Starting audit...
 [ERROR] C:\Users\user\Desktop\ADS1\Module15\15.1 BinarySearchSymbolTable\Solution.java:6:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] C:\Users\user\Desktop\ADS1\Module15\15.1 BinarySearchSymbolTable\Solution.java:6:33: Parameter args should be final. [FinalParameters]
 [ERROR] C:\Users\user\Desktop\ADS1\Module15\15.1 BinarySearchSymbolTable\Solution.java:14:22: 'while' is not followed by whitespace. [WhitespaceAfter]
-[ERROR] C:\Users\user\Desktop\ADS1\Module15\15.1 BinarySearchSymbolTable\Solution.java:17: switch without "default" clause. [MissingSwitchDefault]
 [ERROR] C:\Users\user\Desktop\ADS1\Module15\15.1 BinarySearchSymbolTable\Solution.java:27: Line is longer than 80 characters (found 81). [LineLength]
 [ERROR] C:\Users\user\Desktop\ADS1\Module15\15.1 BinarySearchSymbolTable\Solution.java:35: Line is longer than 80 characters (found 84). [LineLength]
 Audit done.
-Checkstyle ends with 9 errors.
+Checkstyle ends with 8 errors.
