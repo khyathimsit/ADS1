@@ -4,7 +4,7 @@
  * @param      <Key>    The key
  * @param      <Value>  The value
  */
-public class BinarySearchST<Key extends Comparable<Key>, Value> {
+public class BinarySearchST<Key extends Comparable <Key>, Value> {
     /**.
      * { var_description }
      */
