@@ -32,7 +32,14 @@ class BookList<Key extends Comparable<Key>,Value> {
     public void setCost(float cost) {
         this.cost = cost;
     }
-
+    /**
+     * { function_description }
+     *
+     * @param      that  The that
+     *
+     * @return     { description_of_the_return_value }
+     * Time complexity : O(1)
+     */
     public int compareTo(BookList that) {
         if (this.getName().compareTo(that.getName()) > 0) {
             return 1;

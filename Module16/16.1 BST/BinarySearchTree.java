@@ -10,14 +10,29 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
         public Node () {
         }
     }
-
+    /**
+     * { function_description }
+     *
+     * @param      key   The key
+     * @param      val   The value
+     * Time complexity : O(logn)
+     */
     public void put(BookList key, Value val) {
         if (key == null) {
             System.out.println("key is null");
         }
         root = put(root, key, val);
     }
-
+    /**
+     * { function_description }
+     *
+     * @param      head  The head
+     * @param      key   The key
+     * @param      val   The value
+     *
+     * @return     { description_of_the_return_value }
+     * Time complexity : O(logn)
+     */
     public Node put(Node head, BookList key, Value val) {
         if (head == null) {
             Node node = new Node();
@@ -37,11 +52,26 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
         }
         return head;
     }
-
+    /**
+     * { function_description }
+     *
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     * Time complexity : O(logn)
+     */
     public Value get(BookList key) {
         return get(root, key);
     }
-
+    /**
+     * { function_description }
+     *
+     * @param      root  The root
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     * Time complexity : O(logn)
+     */
     private Value get(Node root, BookList key) {
         if (key == null) {
             System.out.println("key is null");
