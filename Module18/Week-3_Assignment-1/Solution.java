@@ -54,19 +54,6 @@ class Solution {
 				maxpq.insert(stock);
 				count++;
 			}
-
-			for (int k = 0; k < 5; k++) {
-				Stock min = minpq.delMin();
-				if (minST.contains(min.getname())) {
-					int valuemin = minST.get(min.getname());
-					minST.put(min.getname(), ++valuemin);
-				} else {
-					minST.put(min.getname(), 1);
-				}
-				System.out.println(min);
-			}
-			System.out.println();
-			
 			for (int j = 0; j < 5; j++) {
 				Stock max = maxpq.delMax();
 				if (maxST.contains(max.getname())) {
@@ -78,17 +65,17 @@ class Solution {
 				System.out.println(max);
 			}
 			System.out.println();
-			// for (int k = 0; k < 5; k++) {
-			// 	Stock min = minpq.delMin();
-			// 	if (minST.contains(min.getname())) {
-			// 		int valuemin = minST.get(min.getname());
-			// 		minST.put(min.getname(), ++valuemin);
-			// 	} else {
-			// 		minST.put(min.getname(), 1);
-			// 	}
-			// 	System.out.println(min);
-			// }
-			// System.out.println();
+			for (int k = 0; k < 5; k++) {
+				Stock min = minpq.delMin();
+				if (minST.contains(min.getname())) {
+					int valuemin = minST.get(min.getname());
+					minST.put(min.getname(), ++valuemin);
+				} else {
+					minST.put(min.getname(), 1);
+				}
+				System.out.println(min);
+			}
+			System.out.println();
 		}
 	}
 }
