@@ -1,19 +1,53 @@
+/**.
+ * { item_description }
+ */
 import java.util.Scanner;
-
+/**.
+ * Class for stock.
+ */
 class Stock implements Comparable<Stock> {
+	/**.
+	 * { var_description }
+	 */
 	private String name;
+	/**.
+	 * { var_description }
+	 */
 	private float change;
-	Stock(String n, float c) {
+	/**.
+	 * Constructs the object.
+	 *
+	 * @param      n     { parameter_description }
+	 * @param      c     { parameter_description }
+	 */
+	Stock(final String n, final float c) {
 		this.name = n;
 		this.change = change;
 	}
+	/**.
+	 * { function_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public String getname() {
 		return this.name;
 	}
+	/**.
+	 * { function_description }
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public float getchange() {
 		return this.change;
 	}
-	public int compareTo(Stock other) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      other  The other
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
+	public int compareTo(final Stock other) {
 		if (this.change > other.change) {
 			return 1;
 		}
@@ -28,17 +62,33 @@ class Stock implements Comparable<Stock> {
 		}
 		return 0;
 	}
+	/**.
+	 * Returns a string representation of the object.
+	 *
+	 * @return     String representation of the object.
+	 */
 	public String toString() {
 		String str = "";
 		str = str + this.name + " " + this.change;
 		return str;
 	}
 }
-class Solution {
+/**.
+ * { item_description }
+ */
+final class Solution {
+	/**.
+	 * Constructs the object.
+	 */
 	private Solution() {
 
 	}
-	public static void main(String[] args) {
+	/**.
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		BinarySearchST<String, Integer> maxST = new  BinarySearchST<>();
 		BinarySearchST<String, Integer> minST = new BinarySearchST<>();
