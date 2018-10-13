@@ -1,8 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\user\Desktop\ADS1\Module18\Week-3_Assignment-1\Solution.java:9:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] C:\Users\user\Desktop\ADS1\Module18\Week-3_Assignment-1\Solution.java:96:37: '6' is a magic number. [MagicNumber]
-[ERROR] C:\Users\user\Desktop\ADS1\Module18\Week-3_Assignment-1\Solution.java:102: Line is longer than 80 characters (found 98). [LineLength]
-[ERROR] C:\Users\user\Desktop\ADS1\Module18\Week-3_Assignment-1\Solution.java:107:45: '5' is a magic number. [MagicNumber]
-[ERROR] C:\Users\user\Desktop\ADS1\Module18\Week-3_Assignment-1\Solution.java:118:45: '5' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 5 errors.
