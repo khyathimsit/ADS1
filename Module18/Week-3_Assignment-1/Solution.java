@@ -107,26 +107,47 @@ final class Solution {
             }
             for (int j = 0; j < 2 + 2 + 1; j++) {
                 Stock max = maxpq.delMax();
-                // if (maxST.contains(max.getname())) {
-                //     int value = maxST.get(max.getname());
-                //     maxST.put(max.getname(), ++value);
-                // } else {
-                //     maxST.put(max.getname(), 1);
-                // }
-                System.out.println(max.getname() + max.getchange());
+                if (maxST.contains(max.getname())) {
+                    int value = maxST.get(max.getname());
+                    maxST.put(max.getname(), ++value);
+                } else {
+                    maxST.put(max.getname(), 1);
+                }
+                System.out.println(max.getname() + " " +max.getchange());
             }
             System.out.println();
             for (int k = 0; k < 2 + 2 + 1; k++) {
                 Stock min = minpq.delMin();
-                // if (minST.contains(min.getname())) {
-                //     int valuemin = minST.get(min.getname());
-                //     minST.put(min.getname(), ++valuemin);
-                // } else {
-                //     minST.put(min.getname(), 1);
-                // }
-                System.out.println(min.getname() + min.getchange());
+                if (minST.contains(min.getname())) {
+                    int valuemin = minST.get(min.getname());
+                    minST.put(min.getname(), ++valuemin);
+                } else {
+                    minST.put(min.getname(), 1);
+                }
+                System.out.println(min.getname() + " " + min.getchange());
             }
             System.out.println();
+        }
+        int n1 = Integer.parseInt(scan.nextLine());
+        while (n1 > 0) {
+            String[] tokens = scan.nextLine().split(",");
+            switch(tokens[0]) {
+                case "get":
+                    if (tokens[1].equals("maxST")) {
+                        if (maxST.contains(tokens[2])) {
+                            System.out.println(maxST.get(tokens[2]));
+                        } else {
+                            System.out.println("0");
+                        }
+                    } else {
+                       if (minST.contains(tokens[2])) {
+                            System.out.println(minST.get(tokens[2]));
+                        } else {
+                            System.out.println("0");
+                        } 
+                    }
+                break;
+            }
         }
     }
 }
