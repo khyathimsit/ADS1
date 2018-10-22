@@ -103,7 +103,7 @@ final class Solution {
                     Float.parseFloat(details[1]));
                 minpq.insert(stock);
                 maxpq.insert(stock);
-                //count++;
+                count++;
             }
             for (int j = 0; j < 2 + 2 + 1; j++) {
                 Stock max = maxpq.delMax();
@@ -127,28 +127,53 @@ final class Solution {
                 System.out.println(min.getname() + " " + min.getchange());
             }
             System.out.println();
-            count++;
+            //count++;
         }
-        int n1 = Integer.parseInt(scan.nextLine());
-        while (n1 > 0) {
-            String[] tokens = scan.nextLine().split(",");
-            switch(tokens[0]) {
-                case "get":
-                    if (tokens[1].equals("maxST")) {
-                        if (maxST.contains(tokens[2])) {
-                            System.out.println(maxST.get(tokens[2]));
-                        } else {
-                            System.out.println("0");
-                        }
+
+        int querynum = Integer.parseInt(scan.nextLine());
+        //For queries
+        for (int l = 0; l < querynum; l++) {
+            String[] querydetails = scan.nextLine().split(",");
+            if (querydetails[0].equals("get")) {
+                if (querydetails[1].equals("maxST")) {
+                    if (!maxST.contains(querydetails[2])) {
+                        System.out.println("0");
                     } else {
-                       if (minST.contains(tokens[2])) {
-                            System.out.println(minST.get(tokens[2]));
-                        } else {
-                            System.out.println("0");
-                        } 
+                        System.out.println(
+                            maxST.get(querydetails[2]
+                                     ));
                     }
-                break;
+                } else {
+                    if (!minST.contains(querydetails[2])) {
+                        System.out.println("0");
+                    } else {
+                        System.out.println(
+                            minST.get(querydetails[2]
+                                     ));
+                    }
+                }
             }
         }
+        // int n1 = Integer.parseInt(scan.nextLine());
+        // while (n1 > 0) {
+        //     String[] tokens = scan.nextLine().split(",");
+        //     switch(tokens[0]) {
+        //         case "get":
+        //             if (tokens[1].equals("maxST")) {
+        //                 if (maxST.contains(tokens[2])) {
+        //                     System.out.println(maxST.get(tokens[2]));
+        //                 } else {
+        //                     System.out.println("0");
+        //                 }
+        //             } else {
+        //                if (minST.contains(tokens[2])) {
+        //                     System.out.println(minST.get(tokens[2]));
+        //                 } else {
+        //                     System.out.println("0");
+        //                 } 
+        //             }
+        //         break;
+        //     }
+        // }
     }
 }
