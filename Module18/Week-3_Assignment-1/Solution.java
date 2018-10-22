@@ -103,7 +103,7 @@ final class Solution {
                     Float.parseFloat(details[1]));
                 minpq.insert(stock);
                 maxpq.insert(stock);
-                count++;
+                //count++;
             }
             for (int j = 0; j < 2 + 2 + 1; j++) {
                 Stock max = maxpq.delMax();
@@ -127,6 +127,7 @@ final class Solution {
                 System.out.println(min.getname() + " " + min.getchange());
             }
             System.out.println();
+            count++;
         }
         int n1 = Integer.parseInt(scan.nextLine());
         while (n1 > 0) {
