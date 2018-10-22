@@ -1,73 +1,73 @@
-/**.
+/**
  * Class for binary search tree.
  *
  * @param      <Key>    The key
  * @param      <Value>  The value
  */
-class BinarySearchTree<Key extends Comparable<Key>,Value> {
-    /**.
-     * { var_description }
+class BinarySearchTree<Key extends Comparable<Key>, Value> {
+    /**
+     * { node root }.
      */
     private Node root;
-    /**.
-     * { var_description }
+    /**
+     * { variable for size }.
      */
     private int size;
-    /**.
+    /**
      * Class for node.
      */
     private class Node {
-        /**.
-         * { var_description }
+        /**
+         * { variable for key }.
          */
         private BookList key;
         /**.
-         * { var_description }
+         * { variable for value }.
          */
         private Value val;
-        /**.
-         * { item_description }
+        /**
+         * { variable for left and right nodes }.
          */
         private Node left, right;
-        /**.
-         * { var_description }
+        /**
+         * { variable for count }.
          */
-        private int count; 
-        /**.
+        private int count;
+        /**
          * Constructs the object.
          */
-        public Node () {
-        }
+        Node() { }
     }
-    /**.
-     * { function_description }
+    /**
+     * { adds the element into the tree }.
      *
      * @param      key   The key
      * @param      val   The value
      * Time complexity : O(N)
      */
-    public void put(BookList key, Value val) {
+    public void put(final BookList key, final Value val) {
         if (key == null) {
             System.out.println("key is null");
         }
         root = put(root, key, val);
     }
     /**
-     * { function_description }
+     * { adds the element into the tree }.
      *
-     * @param      head  The head
+     * @param      head1  The head
      * @param      key   The key
      * @param      val   The value
      *
      * @return     { description_of_the_return_value }
      * Time complexity : O(N)
      */
-    public Node put(Node head, BookList key, Value val) {
+    public Node put(final Node head1, final BookList key, final Value val) {
+        Node head = head1;
         if (head == null) {
             Node node = new Node();
             node.key = key;
             node.val = val;
-            node.left = node.right = null;
+            // node.left = node.right = null;
             head = node;
             size++;
         }
@@ -83,44 +83,43 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
         return head;
     }
     /**
-     * { function_description }
+     * { gets the element }.
      *
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
      * Time complexity : O(N)
      */
-    public Value get(BookList key) {
+    public Value get(final BookList key) {
         return get(root, key);
     }
     /**
-     * { function_description }
+     * { gets the element }.
      *
-     * @param      root  The root
+     * @param      root1  The root
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
      * Time complexity : O(N)
      */
-    private Value get(Node root, BookList key) {
+    private Value get(final Node root1, final BookList key) {
         if (key == null) {
             System.out.println("key is null");
         }
-        
-        if (root == null) {
+        if (root1 == null) {
             return null;
         }
-        int compare = key.compareTo(root.key);
+        int compare = key.compareTo(root1.key);
         if (compare < 0) {
-            return get(root.left, key);
+            return get(root1.left, key);
         } else if (compare > 0) {
-            return get(root.right, key);
-        } else{
-            return root.val;
+            return get(root1.right, key);
+        } else {
+            return root1.val;
         }
     }
-    /**.
-     * { function_description }
+    /**
+     * { returns the minimum element in the tree }.
      *
      * @return     { description_of_the_return_value }
      * Time complexity : O(logN)
@@ -128,23 +127,23 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
     public BookList min() {
         return min(root).key;
     }
-    /**.
-     * { function_description }
+    /**
+     * { returns the minimum element in the tree }.
      *
      * @param      x     { parameter_description }
      *
      * @return     { description_of_the_return_value }
      * Time complexity : O(logN)
      */
-    public Node min(Node x) {
+    public Node min(final Node x) {
         if (x.left == null) {
             return x;
         } else {
             return min(x.left);
         }
     }
-    /**.
-     * { function_description }
+    /**
+     * { returns the maximum element in the tree }.
      *
      * @return     { description_of_the_return_value }
      * Time complexity : O(logN)
@@ -152,30 +151,30 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
     public BookList max() {
         return max(root).key;
     }
-    /**.
-     * { function_description }
+    /**
+     * { returns the maximum element in the tree }.
      *
      * @param      x     { parameter_description }
      *
      * @return     { description_of_the_return_value }
      * Time complexity : O(logN)
      */
-    public Node max(Node x) {
+    public Node max(final Node x) {
         if (x.right == null) {
             return x;
         } else {
             return max(x.right);
         }
     }
-    /**.
-     * { function_description }
+    /**
+     * { function for floor }.
      *
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
      * Time complexity : O(logN)
      */
-    public BookList floor(BookList key) {
+    public BookList floor(final BookList key) {
         Node x = floor(root, key);
         if (x == null) {
             return null;
@@ -183,8 +182,8 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
             return x.key;
         }
     }
-    /**.
-     * { function_description }
+    /**
+     * { function for floor }.
      *
      * @param      x     { parameter_description }
      * @param      key   The key
@@ -192,7 +191,7 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
      * @return     { description_of_the_return_value }
      * Time complexity : O(logN)
      */
-    public Node floor(Node x, BookList key) {
+    public Node floor(final Node x, final BookList key) {
         if (x == null) {
             return null;
         }
@@ -210,15 +209,15 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
             return x;
         }
     }
-    /**.
-     * { function_description }
+    /**
+     * { function for ceiling }.
      *
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
      * Time complexity : O(logN)
      */
-    public BookList ceiling(BookList key) {
+    public BookList ceiling(final BookList key) {
         Node x = ceiling(root, key);
         if (x == null) {
             return null;
@@ -226,8 +225,8 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
             return x.key;
         }
     }
-    /**.
-     * { function_description }
+    /**
+     * { function for floor}.
      *
      * @param      x     { parameter_description }
      * @param      key   The key
@@ -235,7 +234,7 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
      * @return     { description_of_the_return_value }
      * Time complexity : O(logN)
      */
-    public Node ceiling(Node x, BookList key) {
+    public Node ceiling(final Node x, final BookList key) {
         if (x == null) {
             return null;
         }
@@ -254,8 +253,8 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
         return ceiling(x.right, key);
     }
 
-    /**.
-     * { function_description }
+    /**
+     * { returns the size }.
      *
      * @return     { description_of_the_return_value }
      * Time complexity : O(1)
@@ -264,29 +263,29 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
     public int size() {
         return size(root);
     }
-    /**.
-     * { function_description }
+    /**
+     * { returns the size }.
      *
      * @param      x     { parameter_description }
      *
      * @return     { description_of_the_return_value }
      * Time complexity : O(1)
      */
-    public int size(Node x) {
+    public int size(final Node x) {
         if (x == null) {
             return 0;
         }
         return x.count;
     }
     /**.
-     * { function_description }
+     * { function for select }.
      *
      * @param      k     { parameter_description }
      *
      * @return     { description_of_the_return_value }
      * Time complexity : O(logN)
      */
-    public BookList select(int k) {
+    public BookList select(final int k) {
         if (k < 0 || k >= size()) {
             return null;
         }
@@ -294,7 +293,7 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
         return x.key;
     }
     /**.
-     * { function_description }
+     * { function for select }.
      *
      * @param      x     { parameter_description }
      * @param      k     { parameter_description }
@@ -302,33 +301,34 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
      * @return     { description_of_the_return_value }
      * Time complexity : O(logN)
      */
-    public Node select(Node x, int k) {
+    public Node select(final Node x, final int k) {
         if (x == null) {
-            return null; 
+            return null;
         }
-        int t = size(x.left); 
+        int t = size(x.left);
         if (t > k) {
-            return select(x.left,  k); 
+            return select(x.left,  k);
         } else if (t < k) {
-            return select(x.right, k-t-1);
+            return select(x.right, k - t - 1);
         } else {
             return x;
         }
     }
-    /**.
-     * { function_description }
+    /**
+     * { function for keys }.
+     *
      * Time complexity : O(N)
      */
     public void keys() {
         keys(root);
     }
-    /**.
-     * { function_description }
+    /**
+     * { function for keys }.
      *
      * @param      x     { parameter_description }
      * Time complexity : O(N)
      */
-    public void keys(Node x) {
+    public void keys(final Node x) {
         if (x == null) {
             return;
         } else {
