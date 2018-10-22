@@ -195,6 +195,9 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
     }
 
     public int size(Node x) {
+    	if (x == null) {
+    		return 0;
+    	}
         return x.count;
     }
 
