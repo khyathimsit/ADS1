@@ -50,8 +50,8 @@ public final class Solution {
                         tokens[2], Float.parseFloat(tokens[2 + 1]))));
                 break;
                 case "select":
-                    System.out.println(bst.select(Integer.parseInt
-                        (tokens[1])));
+                    System.out.println(bst.select(Integer.parseInt(
+                        tokens[1])));
                 break;
                 default:
                 break;
