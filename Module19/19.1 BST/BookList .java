@@ -4,32 +4,32 @@
  * @param      <Key>    The key
  * @param      <Value>  The value
  */
-class BookList<Key extends Comparable<Key>,Value> {
-    /**.
-     * Book name
+class BookList<Key extends Comparable<Key>, Value> {
+    /**
+     * Book name.
      */
-    String name;
-    /**.
-     * Author name
+    private String name;
+    /**
+     * Author name.
      */
-    String author;
-    /**.
+    private String author;
+    /**
      * Cost of the book.
      */
-    Float cost;
-    /**.
+    private Float cost;
+    /**
      * Constructs the object.
      *
-     * @param      name    The name
-     * @param      author  The author
-     * @param      cost    The cost
+     * @param      name1    The name
+     * @param      author1  The author
+     * @param      cost1    The cost
      */
-    BookList(String name, String author, Float cost) {
-        this.name = name;
-        this.author = author;
-        this.cost = cost;
+    BookList(final String name1, final String author1, final Float cost1) {
+        this.name = name1;
+        this.author = author1;
+        this.cost = cost1;
     }
-    /**.
+    /**
      * Gets the name.
      *
      * @return     The name.
@@ -37,15 +37,15 @@ class BookList<Key extends Comparable<Key>,Value> {
     public String getName() {
         return this.name;
     }
-    /**.
+    /**
      * Sets the name.
      *
-     * @param      name  The name
+     * @param      name1  The name
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setName(final String name1) {
+        this.name = name1;
     }
-    /**.
+    /**
      * Gets the author.
      *
      * @return     The author.
@@ -53,15 +53,15 @@ class BookList<Key extends Comparable<Key>,Value> {
     public String getAuthor() {
         return this.author;
     }
-    /**.
+    /**
      * Sets the author.
      *
-     * @param      author  The author
+     * @param      author1  The author
      */
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setAuthor(final String author1) {
+        this.author = author1;
     }
-    /**.
+    /**
      * Gets the cost.
      *
      * @return     The cost.
@@ -69,23 +69,23 @@ class BookList<Key extends Comparable<Key>,Value> {
     public float getCost() {
         return this.cost;
     }
-    /**.
+    /**
      * Sets the cost.
      *
-     * @param      cost  The cost
+     * @param      cost1  The cost
      */
-    public void setCost(float cost) {
-        this.cost = cost;
+    public void setCost(final float cost1) {
+        this.cost = cost1;
     }
-    /**.
-     * { function_description }
+    /**
+     * Compare to function.
      *
      * @param      that  The that
      *
      * @return     { description_of_the_return_value }
      * Time complexity : O(1)
      */
-    public int compareTo(BookList that) {
+    public int compareTo(final BookList that) {
         if (this.getName().compareTo(that.getName()) > 0) {
             return 1;
         } else if (this.getName().compareTo(that.getName()) < 0) {
@@ -106,7 +106,7 @@ class BookList<Key extends Comparable<Key>,Value> {
             }
         }
     }
-    /**.
+    /**
      * Returns a string representation of the object.
      *
      * @return     String representation of the object.

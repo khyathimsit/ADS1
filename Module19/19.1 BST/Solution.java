@@ -53,6 +53,9 @@ public final class Solution {
                     System.out.println(bst.select(Integer.parseInt(
                         tokens[1])));
                 break;
+                case "keys":
+                    bst.keys();
+                break;
                 default:
                 break;
             }
