@@ -1,17 +1,45 @@
+/**.
+ * Class for binary search tree.
+ *
+ * @param      <Key>    The key
+ * @param      <Value>  The value
+ */
 class BinarySearchTree<Key extends Comparable<Key>,Value> {
+    /**.
+     * { var_description }
+     */
     private Node root;
+    /**.
+     * { var_description }
+     */
     private int size;
-
+    /**.
+     * Class for node.
+     */
     private class Node {
+        /**.
+         * { var_description }
+         */
         private BookList key;
+        /**.
+         * { var_description }
+         */
         private Value val;
+        /**.
+         * { item_description }
+         */
         private Node left, right;
+        /**.
+         * { var_description }
+         */
         private int count; 
-
+        /**.
+         * Constructs the object.
+         */
         public Node () {
         }
     }
-    /**
+    /**.
      * { function_description }
      *
      * @param      key   The key
@@ -91,11 +119,21 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
             return root.val;
         }
     }
-
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public BookList min() {
         return min(root).key;
     }
-
+    /**.
+     * { function_description }
+     *
+     * @param      x     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Node min(Node x) {
         if (x.left == null) {
             return x;
@@ -103,11 +141,21 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
             return min(x.left);
         }
     }
-
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public BookList max() {
         return max(root).key;
     }
-
+    /**.
+     * { function_description }
+     *
+     * @param      x     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Node max(Node x) {
         if (x.right == null) {
             return x;
@@ -115,7 +163,13 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
             return max(x.right);
         }
     }
-
+    /**.
+     * { function_description }
+     *
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
     public BookList floor(BookList key) {
         Node x = floor(root, key);
         if (x == null) {
@@ -124,7 +178,14 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
             return x.key;
         }
     }
-
+    /**.
+     * { function_description }
+     *
+     * @param      x     { parameter_description }
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Node floor(Node x, BookList key) {
         if (x == null) {
             return null;
@@ -143,7 +204,13 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
             return x;
         }
     }
-
+    /**.
+     * { function_description }
+     *
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
     public BookList ceiling(BookList key) {
         Node x = ceiling(root, key);
         if (x == null) {
@@ -152,7 +219,14 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
             return x.key;
         }
     }
-
+    /**.
+     * { function_description }
+     *
+     * @param      x     { parameter_description }
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Node ceiling(Node x, BookList key) {
         if (x == null) {
             return null;
@@ -180,27 +254,45 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
     //     if (x == null) {
     //         return 0;
     //     }
-    //     int compare = key.compareTo(x.key); 
+    //     int compare = key.compareTo(x.key);
     //     if (compare < 0) {
-    //         return rank(x.left, key); 
+    //         return rank(x.left, key);
     //     } else if (compare > 0) {
-    //         return 1 + size(x.left) + rank(x.right, key); 
+    //         return 1 + size(x.left) + rank(x.right, key);
     //     } else {
     //         return size(x.left);
     //     }
     // }
+    
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
 
     public int size() {
         return size(root);
     }
-
+    /**.
+     * { function_description }
+     *
+     * @param      x     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int size(Node x) {
-    	if (x == null) {
-    		return 0;
-    	}
+        if (x == null) {
+            return 0;
+        }
         return x.count;
     }
-
+    /**.
+     * { function_description }
+     *
+     * @param      k     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public BookList select(int k) {
         if (k < 0 || k >= size()) {
             return null;
@@ -208,7 +300,14 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
         Node x = select(root, k);
         return x.key;
     }
-
+    /**.
+     * { function_description }
+     *
+     * @param      x     { parameter_description }
+     * @param      k     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     private Node select(Node x, int k) {
         if (x == null) {
             return null; 
@@ -217,7 +316,7 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
         if (t > k) {
             return select(x.left,  k); 
         } else if (t < k) {
-            return select(x.right, k-t-1); 
+            return select(x.right, k-t-1);
         } else {
             return x;
         }
