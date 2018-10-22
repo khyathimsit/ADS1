@@ -61,4 +61,8 @@ class BookList<Key extends Comparable<Key>,Value> {
             }
         }
     }
+
+    public String toString() {
+        return getName() + ", " + getAuthor() + ", " + getCost();
+    }
 }
