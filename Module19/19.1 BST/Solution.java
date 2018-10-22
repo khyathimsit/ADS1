@@ -42,11 +42,11 @@ public final class Solution {
                     System.out.println(bst.max());
                 break;
                 case "floor":
-                    System.out.println(bst.get(new BookList(tokens[1],
+                    System.out.println(bst.floor(new BookList(tokens[1],
                         tokens[2], Float.parseFloat(tokens[2 + 1]))));
                 break;
                 case "ceiling":
-                    System.out.println(bst.get(new BookList(tokens[1],
+                    System.out.println(bst.ceiling(new BookList(tokens[1],
                         tokens[2], Float.parseFloat(tokens[2 + 1]))));
                 break;
                 case "select":
