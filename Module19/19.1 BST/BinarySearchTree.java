@@ -145,7 +145,7 @@ class BinarySearchTree<Key extends Comparable<Key>,Value> {
     }
 
     public BookList ceiling(BookList key) {
-        Node x = floor(root, key);
+        Node x = ceiling(root, key);
         if (x == null) {
             return null;
         } else {
