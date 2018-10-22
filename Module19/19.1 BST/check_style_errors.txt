@@ -1,0 +1,4 @@
+Starting audit...
+[ERROR] C:\Users\user\Desktop\ADS1\Module19\19.1 BST\Solution.java:54:25: '(' should be on the previous line. [MethodParamPad]
+Audit done.
+Checkstyle ends with 1 errors.
