@@ -391,7 +391,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * @param      key   The key
      * Time complexity : O(N)
      */
-    public void delete(BookList key) {
+    public void delete(final BookList key) {
         root = delete(root, key);
     }
     /**.
