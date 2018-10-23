@@ -363,4 +363,33 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
         x.count = 1 + size(x.left) + size(x.right);
         return x;
     }
+
+    public void delete(BookList key) {
+        delete(key);
+    }
+
+    public Node delete(Node x, BookList key) {
+        if (x == null) {
+            return null;
+        }
+        int compare = key.compareTo(x.key);
+        if (compare < 0) {
+            x.left  = delete(x.left, key);
+        } else if (compare > 0) {
+            x.right = delete(x.right, key);
+        } else { 
+            if (x.right == null) {
+                return x.left;
+            }
+            if (x.left  == null) {
+                return x.right;
+            }
+            Node t = x;
+            x = min(t.right);
+            x.right = deleteMin(t.right);
+            x.left = t.left;
+        } 
+        x.count = size(x.left) + size(x.right) + 1;
+        return x;
+    }
 }

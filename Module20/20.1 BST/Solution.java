@@ -56,10 +56,10 @@ public final class Solution {
                 case "keys":
                     bst.keys();
                 break;
-                // case "delete":
-                //     bst.delete(new BookList(tokens[1],
-                //         tokens[2], Float.parseFloat(tokens[2 + 1])));
-                // break;
+                case "delete":
+                    bst.delete(new BookList(tokens[1],
+                        tokens[2], Float.parseFloat(tokens[2 + 1])));
+                break;
                 case "deleteMin":
                     bst.deleteMin();
                 break;
