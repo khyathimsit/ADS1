@@ -347,12 +347,13 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     /**.
      * { function_description }
      *
-     * @param      x     { parameter_description }
+     * @param      x1     { parameter_description }
      *
      * @return     { description_of_the_return_value }
      * Time complexity : O(N)
      */
-    public Node deleteMin(Node x) {
+    public Node deleteMin(final Node x1) {
+        Node x = x1;
         if (x.left == null) {
             return x.right; 
         }
@@ -370,12 +371,13 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     /**.
      * { function_description }
      *
-     * @param      x     { parameter_description }
+     * @param      x1     { parameter_description }
      *
      * @return     { description_of_the_return_value }
      * Time complexity : O(N)
      */
-    public Node deleteMax(Node x) {
+    public Node deleteMax(final Node x1) {
+        Node x = x1;
         if (x.right == null) {
             return x.left;
         }
