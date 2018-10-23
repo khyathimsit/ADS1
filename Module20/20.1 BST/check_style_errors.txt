@@ -1,5 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\user\Desktop\ADS1\Module20\20.1 BST\Solution.java:432: Line has trailing spaces. [RegexpSingleline]
-[ERROR] C:\Users\user\Desktop\ADS1\Module20\20.1 BST\Solution.java:491: Line has trailing spaces. [RegexpSingleline]
 Audit done.
-Checkstyle ends with 2 errors.

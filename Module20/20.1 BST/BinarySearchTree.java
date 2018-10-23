@@ -355,7 +355,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     public Node deleteMin(final Node x1) {
         Node x = x1;
         if (x.left == null) {
-            return x.right; 
+            return x.right;
         }
         x.left = deleteMin(x.left);
         x.count = 1 + size(x.left) + size(x.right);
@@ -414,7 +414,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
             x.left  = delete(x.left, key);
         } else if (compare > 0) {
             x.right = delete(x.right, key);
-        } else { 
+        } else {
             if (x.right == null) {
                 return x.left;
             }
