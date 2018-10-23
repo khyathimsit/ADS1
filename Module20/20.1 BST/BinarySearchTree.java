@@ -307,7 +307,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
         }
         int t = size(x.left);
         if (t > k) {
-            return select(x.left,  k);
+            return select(x.left, k);
         } else if (t < k) {
             return select(x.right, k - t - 1);
         } else {
@@ -337,11 +337,19 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
             keys(x.right);
         }
     }
-
+    /**.
+     * { function_description }
+     */
     public void deleteMin() {
        root = deleteMin(root);
     }
-
+    /**.
+     * { function_description }
+     *
+     * @param      x     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Node deleteMin(Node x) {
         if (x.left == null) {
             return x.right; 
@@ -350,24 +358,43 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
         x.count = 1 + size(x.left) + size(x.right);
         return x;
     }
-
+    /**.
+     * { function_description }
+     */
     public void deleteMax() {
         root = deleteMax(root);
     }
-
+    /**.
+     * { function_description }
+     *
+     * @param      x     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Node deleteMax(Node x) {
         if (x.right == null) {
-            return x.left; 
+            return x.left;
         }
         x.right = deleteMax(x.right);
         x.count = 1 + size(x.left) + size(x.right);
         return x;
     }
-
+    /**.
+     * { function_description }
+     *
+     * @param      key   The key
+     */
     public void delete(BookList key) {
         root = delete(root, key);
     }
-
+    /**.
+     * { function_description }
+     *
+     * @param      x     { parameter_description }
+     * @param      key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
     public Node delete(Node x, BookList key) {
         if (x == null) {
             return null;
