@@ -397,13 +397,15 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     /**.
      * { function_description }
      *
-     * @param      x     { parameter_description }
-     * @param      key   The key
+     * @param      x1     { parameter_description }
+     * @param      key1   The key
      *
      * @return     { description_of_the_return_value }
      * Time complexity : O(N)
      */
-    public Node delete(Node x, BookList key) {
+    public Node delete(final Node x1, final BookList key1) {
+        Node x = x1;
+        BookList key = key1;
         if (x == null) {
             return null;
         }
