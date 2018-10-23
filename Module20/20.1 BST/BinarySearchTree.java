@@ -339,7 +339,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     }
 
     public void deleteMin() {
-        deleteMin(root);
+       root = deleteMin(root);
     }
 
     public Node deleteMin(Node x) {
@@ -352,7 +352,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     }
 
     public void deleteMax() {
-        deleteMax(root);
+        root = deleteMax(root);
     }
 
     public Node deleteMax(Node x) {
