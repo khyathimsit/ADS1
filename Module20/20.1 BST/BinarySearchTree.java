@@ -43,7 +43,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      *
      * @param      key   The key
      * @param      val   The value
-     * Time complexity : O(1)
+     * Time complexity : O(N)
      */
     public void put(final BookList key, final Value val) {
         if (key == null) {
@@ -88,7 +88,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
-     * Time complexity : O(1)
+     * Time complexity : O(N)
      */
     public Value get(final BookList key) {
         return get(root, key);
@@ -122,7 +122,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * { returns the minimum element in the tree }.
      *
      * @return     { description_of_the_return_value }
-     * Time complexity : O(1)
+     * Time complexity : O(N)
      */
     public BookList min() {
         return min(root).key;
@@ -146,7 +146,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * { returns the maximum element in the tree }.
      *
      * @return     { description_of_the_return_value }
-     * Time complexity : O(1)
+     * Time complexity : O(N)
      */
     public BookList max() {
         return max(root).key;
@@ -172,7 +172,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
-     * Time complexity : O(1)
+     * Time complexity : O(N)
      */
     public BookList floor(final BookList key) {
         Node x = floor(root, key);
@@ -215,7 +215,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
-     * Time complexity : O(1)
+     * Time complexity : O(N)
      */
     public BookList ceiling(final BookList key) {
         Node x = ceiling(root, key);
@@ -317,7 +317,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     /**
      * { function for keys }.
      *
-     * Time complexity : O(1)
+     * Time complexity : O(N)
      */
     public void keys() {
         keys(root);
@@ -339,6 +339,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     }
     /**.
      * { function_description }
+     * Time complexity : O(N)
      */
     public void deleteMin() {
        root = deleteMin(root);
@@ -349,6 +350,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * @param      x     { parameter_description }
      *
      * @return     { description_of_the_return_value }
+     * Time complexity : O(N)
      */
     public Node deleteMin(Node x) {
         if (x.left == null) {
@@ -360,6 +362,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     }
     /**.
      * { function_description }
+     * Time complexity : O(N)
      */
     public void deleteMax() {
         root = deleteMax(root);
@@ -370,6 +373,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * @param      x     { parameter_description }
      *
      * @return     { description_of_the_return_value }
+     * Time complexity : O(N)
      */
     public Node deleteMax(Node x) {
         if (x.right == null) {
@@ -383,6 +387,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * { function_description }
      *
      * @param      key   The key
+     * Time complexity : O(N)
      */
     public void delete(BookList key) {
         root = delete(root, key);
@@ -394,6 +399,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
+     * Time complexity : O(N)
      */
     public Node delete(Node x, BookList key) {
         if (x == null) {
@@ -415,7 +421,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
             x = min(t.right);
             x.right = deleteMin(t.right);
             x.left = t.left;
-        } 
+        }
         x.count = size(x.left) + size(x.right) + 1;
         return x;
     }
