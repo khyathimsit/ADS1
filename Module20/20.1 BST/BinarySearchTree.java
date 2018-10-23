@@ -365,7 +365,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     }
 
     public void delete(BookList key) {
-        delete(key);
+        delete(root, key);
     }
 
     public Node delete(Node x, BookList key) {
