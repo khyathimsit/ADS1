@@ -38,27 +38,27 @@ public final class Solution {
         int[] array = new int[tokens2.length];
         for (int i = 0; i < tokens2.length; i++) {
             int value = ht.get(tokens2[i]);
-        	if (ht.contains(tokens2[i])) {
-        		array[i] = --value;
-        		ht.put(tokens2[i], value);
-        	} else {
+            if (ht.contains(tokens2[i])) {
+                array[i] = --value;
+                ht.put(tokens2[i], value);
+            } else {
                 array[i] = value;
-        	}
+            }
         }
-        
+
         int count = 0;
         for (int i = 0; i < array.length; i++) {
-        	if (array[i] < 0) {
-        		count++;
+            if (array[i] < 0) {
+                count++;
                 break;
-        	} else {
-        		count = 0;
-        	}
+            } else {
+                count = 0;
+            }
         }
         if (count == 0) {
-        	System.out.println("Yes");
+            System.out.println("Yes");
         } else {
-        	System.out.println("No");
+            System.out.println("No");
         }
     }
 }
