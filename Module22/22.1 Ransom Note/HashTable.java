@@ -17,7 +17,7 @@ class HashTable {
     /**.
      * { var_description }
      */
-    public int num1 = fifty;
+    private final int num1 = fifty;
     /**.
      * { var_description }
      */
