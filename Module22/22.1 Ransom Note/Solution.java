@@ -69,19 +69,19 @@ class HashTable {
     /**.
      * { var_description }
      */
-    private final int FIFTY_1 = 50;
+    private final int FIFTY_NUM = 50;
     /**.
      * { var_description }
      */
-    private final int HEXA_1 = 0x7fffffff;
+    private final int HEX_A = 0x7fffffff;
     /**.
      * { var_description }
      */
-    public int NUM_1 = FIFTY_1;
+    public int NU_M = FIFTY_NUM;
     /**.
      * { var_description }
      */
-    private Node[] s = new Node[NUM_1];
+    private Node[] s = new Node[NU_M];
     /**.
      * Class for node.
      */
@@ -119,7 +119,7 @@ class HashTable {
      * @return     { description_of_the_return_value }
      */
     private int hash(final String key) {
-        return (key.hashCode() & HEXA_1) % NUM_1;
+        return (key.hashCode() & HEX_A) % NU_M;
     }
     /**.
      * { function_description }
