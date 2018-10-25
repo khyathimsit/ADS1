@@ -33,12 +33,14 @@ public final class Solution {
         String[] tokens2 = line2.split(" ");
         int[] array = new int[tokens2.length];
         for (int i = 0; i < tokens2.length; i++) {
+            int value = ht.get(tokens2[i]);
         	if (ht.contains(tokens2[i])) {
-        		int value = ht.get(tokens2[i]);
+        		
         		array[i] = --value;
         		ht.put(tokens2[i], value);
         	} else {
-        		System.out.println("No");
+        		//System.out.println("No");
+                array[i] = value;
         	}
         }
 
