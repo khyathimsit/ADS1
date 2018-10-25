@@ -69,11 +69,11 @@ class HashTable {
     /**.
      * { var_description }
      */
-    private int N = 50;
+    public int N = 50;
     /**.
      * { var_description }
      */
-    private Node[] s = new Node[N];
+    public Node[] s = new Node[N];
     /**.
      * Class for node.
      */
@@ -97,9 +97,9 @@ class HashTable {
          * @param      val   The value
          * @param      n     { parameter_description }
          */
-        Node(String key, int val, Node n) {
-            this.key = key;
-            this.val = val;
+        Node(final String k, final int v, final Node n) {
+            this.key = k;
+            this.val = v;
             this.next = n;
         }
     }
