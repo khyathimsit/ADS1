@@ -41,7 +41,7 @@ class HashTable {
          * @param      v   The value
          * @param      n     { parameter_description }
          */
-        Node(final String k, final int v, final Node n) {
+        protected Node(final String k, final int v, final Node n) {
             this.key = k;
             this.val = v;
             this.next = n;
