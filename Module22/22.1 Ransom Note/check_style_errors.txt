@@ -1,2 +1,14 @@
 Starting audit...
+[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:72:17: Name 'N' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
+[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:72:21: '50' is a magic number. [MagicNumber]
+[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:84:23: Variable 'key' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:88:20: Variable 'val' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:92:21: Variable 'next' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:100:14: Parameter key should be final. [FinalParameters]
+[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:100:21: 'key' hides a field. [HiddenField]
+[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:100:26: Parameter val should be final. [FinalParameters]
+[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:100:30: 'val' hides a field. [HiddenField]
+[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:100:35: Parameter n should be final. [FinalParameters]
+[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:114:34: '0x7fffffff' is a magic number. [MagicNumber]
 Audit done.
+Checkstyle ends with 11 errors.
