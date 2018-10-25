@@ -1,11 +1,19 @@
 /**.
  * Class for hash table.
  */
-public class HashTable {
+class HashTable {
     /**.
      * { var_description }
      */
-    private int N = 50;
+    private final int FIFTY = 50;
+    /**.
+     * { var_description }
+     */
+    private final int HEXA = 0x7fffffff;
+    /**.
+     * { var_description }
+     */
+    public int N = FIFTY;
     /**.
      * { var_description }
      */
@@ -17,25 +25,25 @@ public class HashTable {
         /**.
          * { var_description }
          */
-        public String key;
+        private String key;
         /**.
          * { var_description }
          */
-        public int val;
+        private int val;
         /**.
          * { var_description }
          */
-        public Node next;
+        private Node next;
         /**.
          * Constructs the object.
          *
-         * @param      key   The key
-         * @param      val   The value
+         * @param      k   The key
+         * @param      v   The value
          * @param      n     { parameter_description }
          */
-        Node(String key, int val, Node n) {
-            this.key = key;
-            this.val = val;
+        Node(final String k, final int v, final Node n) {
+            this.key = k;
+            this.val = v;
             this.next = n;
         }
     }
@@ -47,7 +55,7 @@ public class HashTable {
      * @return     { description_of_the_return_value }
      */
     private int hash(final String key) {
-        return (key.hashCode() & 0x7fffffff) % N;
+        return (key.hashCode() & HEXA) % N;
     }
     /**.
      * { function_description }

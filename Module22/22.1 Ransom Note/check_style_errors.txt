@@ -1,15 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:72:16: Name 'N' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MemberName]
-[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:72:16: Variable 'N' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:72:20: '50' is a magic number. [MagicNumber]
-[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:76:19: Variable 's' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:84:23: Variable 'key' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:88:20: Variable 'val' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:92:21: Variable 'next' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:96:12: Unused @param tag for 'key'. [JavadocMethod]
-[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:97:12: Unused @param tag for 'val'. [JavadocMethod]
-[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:100:27: Expected @param tag for 'k'. [JavadocMethod]
-[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:100:40: Expected @param tag for 'v'. [JavadocMethod]
-[ERROR] C:\Users\user\Desktop\ADS1\Module22\22.1 Ransom Note\Solution.java:114:34: '0x7fffffff' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 12 errors.
