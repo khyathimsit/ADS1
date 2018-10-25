@@ -66,6 +66,8 @@ class HashTable {
      *
      * @param      key   The key
      * @param      val   The value
+     * 
+     * Time Complexity: O(logN)
      */
     public void put(final String key, final int val) {
         int i = hash(key);
@@ -83,6 +85,8 @@ class HashTable {
      * @param      key   The key
      *
      * @return     { description_of_the_return_value }
+     * 
+     * Time Complexity: O(logN)
      */
     public int get(final String key) {
         int i = hash(key);
@@ -99,6 +103,8 @@ class HashTable {
      * @param      k     { parameter_description }
      *
      * @return     { description_of_the_return_value }
+     * 
+     * Time Complexity: O(logN)
      */
     public boolean contains(final String k) {
         return get(k) != minusone;
