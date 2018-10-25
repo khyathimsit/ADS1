@@ -26,8 +26,12 @@ public final class Solution {
         String[] tokens = input.split(" ");
         String line = sc.nextLine();
         String[] tokens1 = line.split(" ");
-        for (int i = 0; i < Integer.parseInt(tokens[0]); i++) {
-        	ht.put(tokens1[i], 1);
+        for (int i = 0; i < tokens1.length; i++) {
+            if (ht.contains(tokens1[i])) {
+                ht.put(tokens1[i], ht.get(tokens1[i]) + 1);
+            } else {
+                ht.put(tokens1[i], 1);
+            }
         }
         String line2 = sc.nextLine();
         String[] tokens2 = line2.split(" ");
@@ -35,15 +39,13 @@ public final class Solution {
         for (int i = 0; i < tokens2.length; i++) {
             int value = ht.get(tokens2[i]);
         	if (ht.contains(tokens2[i])) {
-        		
         		array[i] = --value;
         		ht.put(tokens2[i], value);
         	} else {
-        		//System.out.println("No");
                 array[i] = value;
         	}
         }
-
+        
         int count = 0;
         for (int i = 0; i < array.length; i++) {
         	if (array[i] < 0) {
