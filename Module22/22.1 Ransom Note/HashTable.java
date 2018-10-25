@@ -3,6 +3,10 @@
  */
 class HashTable {
     /**.
+     * { item_description }
+     */
+    private final int minusone = -1;
+    /**.
      * { var_description }
      */
     private final int FIFTY_1 = 50;
@@ -87,7 +91,7 @@ class HashTable {
                 return x.val;
             }
         }
-        return -1;
+        return minusone;
     }
     /**.
      * { function_description }
@@ -97,6 +101,6 @@ class HashTable {
      * @return     { description_of_the_return_value }
      */
     public boolean contains(final String k) {
-        return get(k) != -1;
+        return get(k) != minusone;
     }
 }
