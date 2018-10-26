@@ -23,7 +23,7 @@ public final class Solution {
         Scanner sc = new Scanner(System.in);
         HashTableLP lp = new HashTableLP();
         int n = sc.nextInt();
-        for(int i = 0; i<n;i++) {
+        while(sc.hasNext()) {
             String input = sc.nextLine();
             String[] tokens = input.split(" ");
             switch (tokens[0]) {
