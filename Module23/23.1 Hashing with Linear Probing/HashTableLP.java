@@ -1,3 +1,4 @@
+import java.util.*;
 class HashTableLP{
 	private final int thirty = 30001;
 	private final int minusone = -1;
@@ -16,22 +17,21 @@ class HashTableLP{
 
     public void put(String key, int value) {
     	int i;
-    	int hash = hash(key);
-        for (i = hash; keys[i] != null; i = (i + 1) % num1) {
+        for (i = hash(key); keys[i] != null; i = (i + 1) % num1) {
             if (key.equals(keys[i])) {
                 values[i] = value;
                 return;
             }
         }
-        keys[hash] = key;
-        values[hash] = value;
+        keys[i] = key;
+        values[i] = value;
         size++;
+        // System.out.println(Arrays.toString(keys) + "keys");
     }
 
     public int get(String key) {
     	int i;
-    	int hash = hash(key);
-        for (i = hash; keys[i] != null; i = (i + 1) % num1) {
+        for (i = hash(key); keys[i] != null; i = (i + 1) % num1) {
             if (keys[i].equals(key)) {
                 return values[i];
             }
