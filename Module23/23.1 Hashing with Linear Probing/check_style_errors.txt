@@ -1,4 +1,2 @@
 Starting audit...
-[ERROR] C:\Users\user\Desktop\ADS1\Module23\23.1 Hashing with Linear Probing\Solution.java:26:14: 'while' is not followed by whitespace. [WhitespaceAfter]
 Audit done.
-Checkstyle ends with 1 errors.
