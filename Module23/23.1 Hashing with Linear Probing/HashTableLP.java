@@ -51,6 +51,18 @@ class HashTableLP{
         }
         keys[i] = null;
         values[i] = minusone;
+
+        i = (i + 1) % num1;
+        while (keys[i] != null) {
+            // delete keys[i] an vals[i] and reinsert
+            String keyToRehash = keys[i];
+            int valToRehash = values[i];
+            keys[i] = null;
+            values[i] = minusone;
+            size--;
+            put(keyToRehash, valToRehash);
+            i = (i + 1) % num1;
+        }
     }
 
     public boolean contains(final String k) {
@@ -59,9 +71,7 @@ class HashTableLP{
 
     public void display() {
         String str = "{";
-        System.out.println(size);
         for(int i=0; i<size;i++) {
-            // System.out.println("here");
             if (keys[i] != null) {
                 str += keys[i] + ":" + values[i] + ",";
             }
