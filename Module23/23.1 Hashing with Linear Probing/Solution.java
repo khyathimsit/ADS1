@@ -32,7 +32,7 @@ public final class Solution {
                     lp.put(tokens[1], Integer.parseInt(tokens[2]));
                 break;
                 case "get":
-                   lp.get(tokens[1]);
+                    System.out.println(lp.get(tokens[1]));
                 break;
                 case "delete":
                     lp.delete(tokens[1]);
