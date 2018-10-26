@@ -38,6 +38,7 @@ public final class Solution {
                 break;
                 case "display":
                     lp.display();
+                    break;
                 default:
                 break;
             }
