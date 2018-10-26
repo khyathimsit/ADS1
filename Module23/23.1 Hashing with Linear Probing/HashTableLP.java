@@ -11,14 +11,14 @@ class HashTableLP{
 
 	}
 	private int hash(final String key) {
-        return (key.hashCode() & hex) % num1;
+        return (key.hashCode() * 11) % num1;
     }
 
     public void put(String key, int value) {
     	int i;
     	int hash = hash(key);
         for (i = hash; keys[i] != null; i = (i + 1) % num1) {
-            if (keys[i].equals(key)) {
+            if (key.equals(keys[i])) {
                 values[i] = value;
                 return;
             }
@@ -57,7 +57,7 @@ class HashTableLP{
 
     public void display() {
     	System.out.print("{");
-    	for(int i=0; i<num1-1;i++) {
+    	for(int i=0; i<keys.length-1;i++) {
     		System.out.print(keys[i]+":"+values[i]+",");
     	}
     	System.out.println(keys[num1]+":"+values[num1]+"}");
