@@ -11,7 +11,7 @@ class HashTableLP{
 
 	}
 	private int hash(final String key) {
-        return (key.hashCode() * 11) % num1;
+        return (key.hashCode() & hex) % num1;
     }
 
     public void put(String key, int value) {
