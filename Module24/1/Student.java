@@ -30,6 +30,7 @@ class Student {
      * { function_description }
      *
      * @return     { description_of_the_return_value }
+     * Time complexity : O(1)
      */
     public String getname() {
         return this.studentname;
@@ -38,6 +39,7 @@ class Student {
      * { function_description }
      *
      * @return     { description_of_the_return_value }
+     * Time complexity : O(1)
      */
     public double getmarks() {
         return this.totalmarks;
@@ -46,6 +48,7 @@ class Student {
      * Returns a string representation of the object.
      *
      * @return     String representation of the object.
+     * Time complexity : O(1)
      */
     public String toString() {
         String str = "";

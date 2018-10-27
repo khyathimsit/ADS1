@@ -25,7 +25,8 @@ public final class Solution {
         int num = Integer.parseInt(scan.nextLine());
         for (int i = 0; i < num; i++) {
             String[] tokens = scan.nextLine().split(",");
-            st = new Student(tokens[1], Double.parseDouble(tokens[2]));
+            st = new Student(tokens[1],
+                Double.parseDouble(tokens[2]));
             sc.put(Integer.parseInt(tokens[0]), st);
         }
         int querynum = Integer.parseInt(scan.nextLine());
