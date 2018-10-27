@@ -1,22 +1,55 @@
+/**.
+ * Class for student.
+ */
 class Student {
-	private String studentname;
-	private double totalmarks;
-	Student() {
-		
-	}
-	Student(String name, double marks) {
-		this.studentname = name;
-		this.totalmarks = marks;
-	}
-	public String getname() {
-		return this.studentname;
-	}
-	public double getmarks() {
-		return this.totalmarks;
-	}
-	public String toString() {
-		String str = "";
-		str = str + this.studentname + this.totalmarks;
-		return str;
-	}
+    /**.
+     * { var_description }
+     */
+    private String studentname;
+    /**.
+     * { var_description }
+     */
+    private double totalmarks;
+    /**.
+     * Constructs the object.
+     */
+    Student() {
+
+    }
+    /**.
+     * Constructs the object.
+     *
+     * @param      name   The name
+     * @param      marks  The marks
+     */
+    Student(final String name, final double marks) {
+        this.studentname = name;
+        this.totalmarks = marks;
+    }
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public String getname() {
+        return this.studentname;
+    }
+    /**.
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public double getmarks() {
+        return this.totalmarks;
+    }
+    /**.
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
+    public String toString() {
+        String str = "";
+        str = str + this.studentname + this.totalmarks;
+        return str;
+    }
 }

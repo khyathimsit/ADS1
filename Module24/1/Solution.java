@@ -18,17 +18,17 @@ class Solution {
             String[] tokens = scan.nextLine().split(" ");
             if (tokens[0].equals("get")) {
                 if (Integer.parseInt(tokens[2]) == 1) {
-                    if (sc.get(Integer.parseInt(tokens[1])) == null) {
-                        System.out.println("Student doesn't exists...");
-                    } else {
+                    if (sc.get(Integer.parseInt(tokens[1])) != null) {
                         System.out.println(sc.get(Integer.parseInt(tokens[1])).getname());
+                    } else {
+                        System.out.println("Student doesn't exists...");
                     }
 
                 } else {
-                    if (sc.get(Integer.parseInt(tokens[1])) == null) {
-                        System.out.println("Student doesn't exists...");
-                    } else {
+                    if (sc.get(Integer.parseInt(tokens[1])) != null) {
                         System.out.println(sc.get(Integer.parseInt(tokens[1])).getmarks());
+                    } else {
+                        System.out.println("Student doesn't exists...");
                     }
                 }
             }

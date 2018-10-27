@@ -1,17 +1,46 @@
+/**.
+ * { item_description }
+ */
 import java.util.Iterator;
+/**.
+ * { item_description }
+ */
 import java.util.NoSuchElementException;
+/**.
+ * List of .
+ *
+ * @param      <Item>  The item
+ */
 public class Queue<Item> implements Iterable<Item> {
-    private Node<Item> first;    // beginning of queue
-    private Node<Item> last;     // end of queue
-    private int n;               // number of elements on queue
-
-    // helper linked list class
+    /**.
+     * { var_description }
+     */
+    private Node<Item> first;
+    /**.
+     * { var_description }
+     */
+    private Node<Item> last;
+    /**.
+     * { var_description }
+     */
+    private int n;
+    /**.
+     * Class for node.
+     *
+     * @param      <Item>  The item
+     */
     private static class Node<Item> {
+        /**.
+         * { var_description }
+         */
         private Item item;
+        /**.
+         * { var_description }
+         */
         private Node<Item> next;
     }
 
-    /**
+    /**.
      * Initializes an empty queue.
      */
     public Queue() {
@@ -20,7 +49,7 @@ public class Queue<Item> implements Iterable<Item> {
         n = 0;
     }
 
-    /**
+    /**.
      * Returns true if this queue is empty.
      *
      * @return {@code true} if this queue is empty; {@code false} otherwise
@@ -29,7 +58,7 @@ public class Queue<Item> implements Iterable<Item> {
         return first == null;
     }
 
-    /**
+    /**.
      * Returns the number of items in this queue.
      *
      * @return the number of items in this queue
@@ -38,7 +67,7 @@ public class Queue<Item> implements Iterable<Item> {
         return n;
     }
 
-    /**
+    /**.
      * Returns the item least recently added to this queue.
      *
      * @return the item least recently added to this queue
@@ -49,22 +78,25 @@ public class Queue<Item> implements Iterable<Item> {
         return first.item;
     }
 
-    /**
+    /**.
      * Adds the item to this queue.
      *
      * @param  item the item to add
      */
-    public void enqueue(Item item) {
+    public void enqueue(final Item item) {
         Node<Item> oldlast = last;
         last = new Node<Item>();
         last.item = item;
         last.next = null;
-        if (isEmpty()) first = last;
-        else           oldlast.next = last;
+        if (isEmpty()) {
+            first = last;
+        } else {
+            oldlast.next = last;
+        }
         n++;
     }
 
-    /**
+    /**.
      * Removes and returns the item on this queue that was least recently added.
      *
      * @return the item on this queue that was least recently added
@@ -75,11 +107,13 @@ public class Queue<Item> implements Iterable<Item> {
         Item item = first.item;
         first = first.next;
         n--;
-        if (isEmpty()) last = null;   // to avoid loitering
+        if (isEmpty()) {
+            last = null;
+        }
         return item;
     }
 
-    /**
+    /**.
      * Returns a string representation of this queue.
      *
      * @return the sequence of items in FIFO order, separated by spaces
@@ -91,30 +125,58 @@ public class Queue<Item> implements Iterable<Item> {
             s.append(' ');
         }
         return s.toString();
-    } 
+    }
 
-    /**
+    /**.
      * Returns an iterator that iterates over the items in this queue in FIFO order.
      *
      * @return an iterator that iterates over the items in this queue in FIFO order
      */
-    public Iterator<Item> iterator()  {
-        return new ListIterator<Item>(first);  
+    public Iterator<Item> iterator() {
+        return new ListIterator<Item>(first);
     }
 
-    // an iterator, doesn't implement remove() since it's optional
+    /**.
+     * Class for list iterator.
+     *
+     * @param      <Item>  The item
+     */
     private class ListIterator<Item> implements Iterator<Item> {
+        /**.
+         * { var_description }
+         */
         private Node<Item> current;
-
+        /**.
+         * Constructs the object.
+         *
+         * @param      first  The first
+         */
         public ListIterator(Node<Item> first) {
             current = first;
         }
-
-        public boolean hasNext()  { return current != null;                     }
-        public void remove()      { throw new UnsupportedOperationException();  }
-
+        /**.
+         * Determines if it has next.
+         *
+         * @return     True if has next, False otherwise.
+         */
+        public boolean hasNext()  {
+            return current != null;
+        }
+        /**.
+         * { function_description }
+         */
+        public void remove() { 
+            throw new UnsupportedOperationException();
+        }
+        /**.
+         * { function_description }
+         *
+         * @return     { description_of_the_return_value }
+         */
         public Item next() {
-            if (!hasNext()) throw new NoSuchElementException();
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
             Item item = current.item;
             current = current.next; 
             return item;
