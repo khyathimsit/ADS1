@@ -1,11 +1,26 @@
+/**.
+ * { item_description }
+ */
 import java.util.Scanner;
-class Solution {
+/**.
+ * Class for solution.
+ */
+public final class Solution {
+    /**.
+     * Constructs the object.
+     */
     private Solution() {
     
     }
-    public static void main(String[] args) {
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
-        SeparateChainingHashST<Integer, Student> sc = new SeparateChainingHashST<>();
+        SeparateChainingHashST<Integer, Student> 
+                    sc = new SeparateChainingHashST<>();
         Student st = new Student();
         int num = Integer.parseInt(scan.nextLine());
         for (int i = 0; i < num; i++) {
@@ -19,14 +34,15 @@ class Solution {
             if (tokens[0].equals("get")) {
                 if (Integer.parseInt(tokens[2]) == 1) {
                     if (sc.get(Integer.parseInt(tokens[1])) != null) {
-                        System.out.println(sc.get(Integer.parseInt(tokens[1])).getname());
+                        System.out.println(sc.get(Integer.parseInt(
+                            tokens[1])).getname());
                     } else {
                         System.out.println("Student doesn't exists...");
                     }
-
                 } else {
                     if (sc.get(Integer.parseInt(tokens[1])) != null) {
-                        System.out.println(sc.get(Integer.parseInt(tokens[1])).getmarks());
+                        System.out.println(sc.get(
+                            Integer.parseInt(tokens[1])).getmarks());
                     } else {
                         System.out.println("Student doesn't exists...");
                     }
