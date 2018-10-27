@@ -19,7 +19,7 @@ public final class Solution {
      */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
-        SeparateChainingHashST<Integer, Student> 
+        SeparateChainingHashST<Integer, Student>
                     sc = new SeparateChainingHashST<>();
         Student st = new Student();
         int num = Integer.parseInt(scan.nextLine());
