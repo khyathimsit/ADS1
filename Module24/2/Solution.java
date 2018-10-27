@@ -1,6 +1,7 @@
+/**.
+ * { item_description }
+ */
 import java.util.Scanner;
-import java.util.Iterator;
-import java.util.NoSuchElementException;
 /**
  * Class for solution.
  */
@@ -45,7 +46,7 @@ public final class Solution {
                         System.out.println(i.name);
                     }
                 }
-                break;
+            break;
 
             case "GE":
                 double high = Double.parseDouble(tokens[1]);
