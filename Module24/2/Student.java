@@ -5,15 +5,15 @@ class Student implements Comparable<Student> {
     /**
      * { variable for student name }.
      */
-    String name;
+    public String name;
     /**
      * { variable for student marks }.
      */
-    double marks;
+    public double marks;
     /**
      * { variable for student rollnumber }.
      */
-    int rollnumber;
+    public int rollnumber;
     /**.
      * Constructs the object.
      */

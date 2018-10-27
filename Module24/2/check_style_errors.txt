@@ -1,6 +1,6 @@
 Starting audit...
-[ERROR] C:\Users\user\Desktop\ADS1\Module24\2\Student.java:8:12: Variable 'name' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\user\Desktop\ADS1\Module24\2\Student.java:12:12: Variable 'marks' must be private and have accessor methods. [VisibilityModifier]
-[ERROR] C:\Users\user\Desktop\ADS1\Module24\2\Student.java:16:9: Variable 'rollnumber' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\user\Desktop\ADS1\Module24\2\Student.java:8:19: Variable 'name' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\user\Desktop\ADS1\Module24\2\Student.java:12:19: Variable 'marks' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] C:\Users\user\Desktop\ADS1\Module24\2\Student.java:16:16: Variable 'rollnumber' must be private and have accessor methods. [VisibilityModifier]
 Audit done.
 Checkstyle ends with 3 errors.
